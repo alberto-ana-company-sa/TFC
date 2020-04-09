@@ -63,7 +63,7 @@ namespace TFC_2
                 }
                 else
                 {
-                    MessageBox.Show("El nombre de usuario y/o contraseña que has introducido no pertenece a ninguna cuenta. \nComprueba tu nombre y contraseña de usuario y vuelve a intentarlo.");
+                    MessageBox.Show("El nombre de usuario y/o contraseña que has introducido no pertenece a ninguna cuenta. \nComprueba tu nombre y contraseña de usuario y vuelve a intentarlo.", "ERROR", MessageBoxButton.OK);
                 }
             }
             catch (MySqlException ex)
