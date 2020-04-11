@@ -33,8 +33,9 @@
         <Label Content="CONTRASEÑA" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="110,0,0,69.2" Grid.Row="1" Width="126" Height="25"/>
         <PasswordBox x:Name="txtPassword"  Grid.Row="1" Width="200" Height="25" HorizontalAlignment="Left" Margin="115,139,0,40"/>
 
-        <Label Content="¿HAS OLVIDADO LA CONTRASEÑA?" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,0" Grid.Row="1" Width="201" Height="25" Grid.ColumnSpan="1" FontSize="8"/>
-        <Button x:Name="btnAceptar" Content="ACEPTAR" Height="30" Width="100" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" Margin="0,25,180,36" Background="#FF00DD00" Foreground="White" FontWeight="Bold" BorderBrush="#FF00DD00" Click="btnAceptar_Click" />
+        
+        <Label x:Name="lblEnlace" Content="¿HAS OLVIDADO LA CONTRASEÑA?" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,0" Grid.Row="1" Width="201" Height="25" Grid.ColumnSpan="1" FontSize="8" MouseDoubleClick="lblEnlace_MouseDoubleClick" />
+        <Button x:Name="btnAceptar" Content="ACEPTAR" Height="30" Width="100" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" Margin="0,25,180,36" Background="#FF00DD00" Foreground="White" FontWeight="Bold" BorderBrush="#FF00DD00" Click="btnAceptar_Click"/>
         <Button x:Name="btnCancelar" Content="CANCELAR" Height="30" Width="100" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" Margin="0,25,68,36" BorderBrush="#FFDDDDDD" Foreground="#FF2E2E2E" Click="BtnCancelar_Click"/>
         <Image Source="Lynse_blanco.png" Grid.Column="1" Grid.Row="0" Grid.RowSpan="3"/>
     </Grid>

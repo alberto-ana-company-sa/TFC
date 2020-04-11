@@ -21,12 +21,13 @@ namespace TFC_2
     /// </summary>
     public partial class MainWindow : Window
     {
+        string correoApp;
         
         public MainWindow()
         {
             InitializeComponent();
+            
         }
-
 
         private void BtnCancelar_Click(object sender, RoutedEventArgs e)
         {
@@ -70,6 +71,13 @@ namespace TFC_2
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void lblEnlace_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Ventana_Contrasenia_Olvidada ventana_Contrasenia_Olvidada = new Ventana_Contrasenia_Olvidada();
+            ventana_Contrasenia_Olvidada.Show();
+            this.Close();
         }
     }
 }

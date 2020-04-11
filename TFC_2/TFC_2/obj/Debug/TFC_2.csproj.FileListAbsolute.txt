@@ -15,7 +15,6 @@ C:\Users\Usuario\Desktop\TFC\TFC_2\TFC_2\obj\Debug\TFC_2.csprojAssemblyReference
 C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\bin\Debug\TFC_2.exe.config
 C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\bin\Debug\TFC_2.exe
 C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\bin\Debug\TFC_2.pdb
-C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\bin\Debug\MySql.Data.dll
 C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\obj\Debug\TFC_2.csprojAssemblyReference.cache
 C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\obj\Debug\MainWindow.g.cs
 C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\obj\Debug\App.g.cs
@@ -30,3 +29,5 @@ C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\obj\Debug\TFC_2.exe
 C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\obj\Debug\TFC_2.pdb
 C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\obj\Debug\Ventana_Home.g.cs
 C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\obj\Debug\Ventana_Home.baml
+C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\obj\Debug\Ventana_Contrasenia_Olvidada.g.cs
+C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\obj\Debug\Ventana_Contrasenia_Olvidada.baml
