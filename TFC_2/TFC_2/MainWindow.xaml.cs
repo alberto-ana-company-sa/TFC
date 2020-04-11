@@ -71,11 +71,19 @@ namespace TFC_2
             }
         }
 
-        private void lblEnlace_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void lblEnlace_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
             Ventana_Contrasenia_Olvidada ventana_Contrasenia_Olvidada = new Ventana_Contrasenia_Olvidada();
             ventana_Contrasenia_Olvidada.Show();
             this.Close();
         }
+
+        /*private void lblEnlace_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Ventana_Contrasenia_Olvidada ventana_Contrasenia_Olvidada = new Ventana_Contrasenia_Olvidada();
+            ventana_Contrasenia_Olvidada.Show();
+            this.Close();
+        }*/
+
     }
 }
