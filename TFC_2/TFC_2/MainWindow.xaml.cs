@@ -21,8 +21,6 @@ namespace TFC_2
     /// </summary>
     public partial class MainWindow : Window
     {
-        string correoApp;
-        
         public MainWindow()
         {
             InitializeComponent();

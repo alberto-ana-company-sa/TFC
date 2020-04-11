@@ -15,14 +15,14 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="43*"/>
             <RowDefinition Height="123*"/>
-            <RowDefinition Height="157*"/>
-            <RowDefinition Height="92*"/>
+            <RowDefinition Height="168*"/>
+            <RowDefinition Height="81*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="446*"/>
             <ColumnDefinition Width="147*" />
         </Grid.ColumnDefinitions>
-        <Border Background="#3F3F46" Grid.Column="1" Margin="0,-10,0,-10" Grid.RowSpan="4"/>
+        <Border Background="#3F3F46" Margin="446,-10,-0.4,-9.8" Grid.RowSpan="4" Grid.ColumnSpan="2"/>
 
         <Label Content="LYNSE" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,-1,0,1.2" FontWeight="Bold" Foreground="#FF00DD00" Height="43" Width="84" FontSize="20" FontFamily="Segoe UI Black" Grid.Column="0"/>
         <Label Content="PREMIUM" HorizontalAlignment="Right" Margin="0,0,228.4,1.2" VerticalAlignment="Center" FontSize="20" Background="Transparent" Foreground="#FFA19FA2" Grid.Column="0" Height="42" Width="133" FontWeight="Normal"/>
@@ -30,10 +30,14 @@
 
 
         <Image Source="Lynse_blanco.png" Grid.Column="1" Grid.Row="0" Grid.RowSpan="4" Margin="0.6,0,-0.4,0.2"/>
-        <Label Content="¿TIENES PROBLEMAS PARA ENTRAR?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="121,20.8,0,0" Grid.Row="1" Height="26" Width="206"/>
+        <Label Content="¿TIENES PROBLEMAS PARA ENTRAR?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="117,39.8,0,0" Grid.Row="1" Height="26" Width="206"/>
         <Label Content="INTRODUCE TU DIRECCIÓN DE CORREO ELECTRÓNICO &#xD;&#xA;Y TE LLEGARÁ UN EMAIL CON TU NUEVA CONTRASEÑA" HorizontalAlignment="Left" VerticalAlignment="Top" 
-               Margin="110,51.8,0,0" Grid.Row="1" FontSize="9" Foreground="#FFA19FA2"/>
-        <TextBox x:Name="txtNombreUser" Grid.Row="2" Width="200" Height="25" Text="EMAIL" Foreground="#FFB7B7B7"/>
+               Margin="107,71.8,0,0" Grid.Row="1" FontSize="9" Foreground="#FFA19FA2" Height="34" Width="234"/>
+        <TextBox x:Name="txtNombreUser" Grid.Row="2" Text="EMAIL" Foreground="#FFB7B7B7" PreviewMouseDown="txtNombreUser_PreviewMouseDown" Margin="75,28,71,113"/>
+        <TextBox x:Name="txtAsunto" Text="ESCRIBA UNA BREVE DESCRIPCIÓN SI ASÍ LO DESEA" Foreground="#FFB7B7B7" Margin="75,69,71,0" Grid.Row="2" VerticalAlignment="Top" Height="90" Width="300" PreviewMouseDown="txtAsunto_PreviewMouseDown" TextWrapping="Wrap" AcceptsReturn="True" Padding="0,0,10,0"/>
 
+        <Button x:Name="btnAceptar" Content="ACEPTAR" Height="30" Width="100" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Right" Margin="0,24.6,246.4,26.2" Background="#FF00DD00" Foreground="White" FontWeight="Bold" BorderBrush="#FF00DD00" Click="btnAceptar_Click"/>
+        <Button x:Name="btnCancelar" Content="CANCELAR" Height="30" Width="100" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Right" Margin="0,24.6,102.4,26.2" BorderBrush="#FFDDDDDD" Foreground="#FF2E2E2E" Click="btnCancelar_Click"/>
+        <Label Name="lblError" HorizontalContentAlignment="Center" Content="" HorizontalAlignment="Left" Margin="57,2.6,0,0" Grid.Row="2" VerticalAlignment="Top" Width="337" Height="20" FontSize="9" Foreground="Red"/>
     </Grid>
 </Window>
