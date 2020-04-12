@@ -34,6 +34,7 @@ namespace TFC_2
 
         private void btnAceptar_Click(object sender, RoutedEventArgs e)
         {
+            /*
             Boolean encontrado = false;
             string cadenaConexion = "server=localhost;database=lynse;uid=root;pwd=\"\";";
             MySqlConnection conexionBBDD = new MySqlConnection(cadenaConexion);
@@ -68,7 +69,11 @@ namespace TFC_2
             catch (MySqlException ex)
             {
                 MessageBox.Show(ex.ToString());
-            }
+            }*/
+
+            Ventana_Home ventana_Home = new Ventana_Home();
+            ventana_Home.Show();
+            this.Close();
         }
 
         private void lblEnlace_PreviewMouseDown(object sender, MouseButtonEventArgs e)
@@ -77,13 +82,5 @@ namespace TFC_2
             ventana_Contrasenia_Olvidada.Show();
             this.Close();
         }
-
-        /*private void lblEnlace_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            Ventana_Contrasenia_Olvidada ventana_Contrasenia_Olvidada = new Ventana_Contrasenia_Olvidada();
-            ventana_Contrasenia_Olvidada.Show();
-            this.Close();
-        }*/
-
     }
 }
