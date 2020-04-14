@@ -31,3 +31,4 @@ C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\obj\Debug\Ventana_Home.g.cs
 C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\obj\Debug\Ventana_Home.baml
 C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\obj\Debug\Ventana_Contrasenia_Olvidada.g.cs
 C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\obj\Debug\Ventana_Contrasenia_Olvidada.baml
+C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\obj\Debug\TFC_2.csproj.CoreCompileInputs.cache

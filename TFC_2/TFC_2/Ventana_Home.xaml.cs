@@ -23,5 +23,10 @@ namespace TFC_2
         {
             InitializeComponent();
         }
+
+        private void Image_MouseMove(object sender, MouseEventArgs e)
+        {
+            
+        }
     }
 }

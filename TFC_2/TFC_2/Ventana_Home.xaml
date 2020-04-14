@@ -5,30 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TFC_2"
         mc:Ignorable="d"
-        Title="LYNSE" Height="579.047" Width="1104.324" WindowState="Maximized">
+        Title="LYNSE" Height="809.953" Width="1104.324" WindowState="Maximized">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="179*"/>
-            <ColumnDefinition Width="918*"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="448*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="32*"/>
-            <RowDefinition Height="32*"/>
-            <RowDefinition Height="110*"/>
-            <RowDefinition Height="137*"/>
-            <RowDefinition Height="109*"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="142"/>
+            <RowDefinition Height="193*"/>
+            <RowDefinition Height="122*"/>
         </Grid.RowDefinitions>
 
-        <Border Background="#3F3F46" Grid.ColumnSpan="2" Margin="0,0,-0.4,0.4"/>
+        <Border Background="#3F3F46" Grid.ColumnSpan="2" Margin="0,0,-0.4,0.6"/>
         <Label Content="LYNSE" HorizontalAlignment="Left" Margin="0,0,0,41" FontWeight="Bold" Foreground="#FF00DD00" Width="84" FontSize="24" FontFamily="Segoe UI Black" Grid.Column="0" Grid.RowSpan="2"/>
-        <Label Content="PREMIUM" Margin="85,0,0,0.4"  HorizontalAlignment="Left" FontSize="24" Background="Transparent" Foreground="#FFA19FA2" Grid.Column="0" FontWeight="Normal" Grid.ColumnSpan="2" Width="115"/>
-        <Image Source="Lynse_blanco.png" Width="50" HorizontalAlignment="Left" Margin="20,0,0,0.4" Grid.Column="1"/>
+        <Label Content="PREMIUM" Margin="85,0,0,0.6"  HorizontalAlignment="Left" FontSize="24" Background="Transparent" Foreground="#FFA19FA2" Grid.Column="0" FontWeight="Normal" Width="115"/>
+        <Image Source="Lynse_blanco.png" Width="50"  HorizontalAlignment="Left" Margin="10,5,0,5.6" Grid.Column="1"/>
 
-        <Image Source="avataaaaaaaaaaaaaaaaaaaaaaar.png" Width="30" HorizontalAlignment="Right" Margin="0,0,179.6,0.4" Grid.Column="1"/>
-        <Image Source="salida-de-emergencia (2).png" Width="30" HorizontalAlignment="Right" Margin="0,0,4.6,0.4" Grid.Column="1"/>
-        <Label Content="Nombre" Name="lblNombre" Margin="0,0,34.6,0.4"  HorizontalAlignment="Right"  HorizontalContentAlignment="Center" FontSize="24" Foreground="#FFFFFF" FontWeight="Normal" Width="143" Grid.Column="1"/>
+        <Image Source="avataaaaaaaaaaaaaaaaaaaaaaar.png" Width="30" HorizontalAlignment="Right" Margin="0,0,179.6,0.6" Grid.Column="1"/>
+        <Image Source="salida-de-emergencia (2).png" Width="30" HorizontalAlignment="Right" Margin="0,0,4.6,0.6" Grid.Column="1"/>
+        <Label Content="Nombre" Name="lblNombre" Margin="0,0,34.6,0.6"  HorizontalAlignment="Right"  HorizontalContentAlignment="Center" FontSize="24" Foreground="#FFFFFF" FontWeight="Normal" Width="143" Grid.Column="1"/>
 
-        <Menu x:Name="menu" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" HorizontalContentAlignment="Center" Background="{x:Null}" Grid.ColumnSpan="2" Margin="0,42,0,0" Grid.RowSpan="2" Width="246">
+        <Menu x:Name="menu" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" HorizontalContentAlignment="Center" Background="{x:Null}" Grid.ColumnSpan="2" Margin="0,0.4,0,0" Width="246" Grid.Row="1">
             <MenuItem Header="Ventas" HorizontalContentAlignment="Center" Height="40" Background="{x:Null}">
                 <MenuItem Header="Ventas" HorizontalContentAlignment="Center" Height="40" Background="{x:Null}"/>
                 <MenuItem Header="Compras" HorizontalContentAlignment="Center" Height="40" Background="{x:Null}"/>
@@ -46,14 +46,24 @@
             </MenuItem>
             <MenuItem Header="Ayuda" HorizontalContentAlignment="Center" Height="40"/>
         </Menu>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="303" Margin="10,10,0,0" Grid.Row="2" Grid.RowSpan="2" Stroke="Black" VerticalAlignment="Top" Width="159"/>
-        <Label Content="Clientes" HorizontalAlignment="Left" Margin="74,37,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.824,0.138" FontSize="15"/>
-        <Image Source="Clientes.png" Width="30" Height="50" HorizontalAlignment="Left" Margin="39,27,0,67" Grid.Column="0" Grid.Row="2"/>
-        <Label Content="Proveedores" HorizontalAlignment="Left" Margin="74,87,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.824,0.138" FontSize="15"/>
-        <Image Source="Proveedores.png" Width="30" Height="50" HorizontalAlignment="Left" Margin="43,87,0,27" Grid.Column="0" Grid.Row="2"/>
-        <Label Content="Artículos" HorizontalAlignment="Left" Margin="74,137,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.824,0.138" FontSize="15" Grid.RowSpan="2"/>
-        <Image Source="Articulos.png" Width="30" Height="50" HorizontalAlignment="Left" Margin="43,10,0,27" Grid.Column="0" Grid.Row="2" Grid.RowSpan="2"/>
-        <Label Content="Artículos" HorizontalAlignment="Left" Margin="74,137,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.824,0.138" FontSize="15" Grid.RowSpan="2"/>
-        <Image Source="Articulos.png" Width="30" Height="50" HorizontalAlignment="Left" Margin="43,10,0,27" Grid.Column="0" Grid.Row="2" Grid.RowSpan="2"/>
+        <Rectangle HorizontalAlignment="Left" Height="440" Margin="10,9.8,0,0" Grid.Row="2" Grid.RowSpan="2" Stroke="#FFBDBDBD" VerticalAlignment="Top" Width="180"/>
+        <Label Content="Clientes" HorizontalAlignment="Left" Margin="74,36,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.824,0.138" FontSize="15" Height="31" Width="62"/>
+        <Image Source="Clientes.png" Width="30" HorizontalAlignment="Left" Margin="39,35,0,0" Grid.Column="0" Grid.Row="2" Height="50" VerticalAlignment="Top" Cursor="None" MouseMove="Image_MouseMove"/>
+        <Label Content="Proveedores" HorizontalAlignment="Left" Margin="74,108.8,0,0" Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.824,0.138" FontSize="15" Height="31" Width="93"/>
+        <Image Source="Proveedores.png" Width="30" HorizontalAlignment="Left" Margin="43,108.8,0,0" Grid.Column="0" Grid.Row="2" Height="50" VerticalAlignment="Top" Grid.RowSpan="2"/>
+        <Label Content="Artículos" HorizontalAlignment="Left" Margin="74,44.4,0,0" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="0.824,0.138" FontSize="15" Height="31" Width="67"/>
+        <Image Source="Articulos.png" Width="30" HorizontalAlignment="Left" Margin="43,45.4,0,0" Grid.Column="0" Grid.Row="3" Height="50" VerticalAlignment="Top"/>
+        <Label Content="Ventas" Margin="74,112.4,59,0" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="0.824,0.138" FontSize="15" Height="31"/>
+        <Image Source="ventas.png" Width="30" HorizontalAlignment="Left" Margin="43,117.4,0,0" Grid.Column="0" Grid.Row="3" Height="50" VerticalAlignment="Top"/>
+        <Label Content="Compras" HorizontalAlignment="Left" Margin="74,184.4,0,0" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="0.824,0.138" FontSize="15" Height="31" Width="93"/>
+        <Image Source="compra.png" Width="30" HorizontalAlignment="Left" Margin="43,183.4,0,0" Grid.Column="0" Grid.Row="3" Height="50" VerticalAlignment="Top"/>
+        <Label Content="Facturas" HorizontalAlignment="Left" Margin="74,248.4,0,0" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="0.824,0.138" FontSize="15" Height="31" Width="67"/>
+        <Image Source="factura.png" Width="30" HorizontalAlignment="Left" Margin="43,249.4,0,0" Grid.Column="0" Grid.Row="3" Height="50" VerticalAlignment="Top"/>
+        <Button Content="" HorizontalAlignment="Left" Margin="43,35.8,0,0" Grid.Row="2" VerticalAlignment="Top" Width="80" Height="32">
+            <Button.Background>
+                <SolidColorBrush Color="#FFBDBDBD" Opacity="0"/>
+            </Button.Background>
+        </Button>
+
     </Grid>
 </Window>

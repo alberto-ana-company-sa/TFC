@@ -69,11 +69,13 @@ namespace TFC_2
             catch (MySqlException ex)
             {
                 MessageBox.Show(ex.ToString());
-            }*/
-
+            }
+            */
+            
             Ventana_Home ventana_Home = new Ventana_Home();
             ventana_Home.Show();
             this.Close();
+            
         }
 
         private void lblEnlace_PreviewMouseDown(object sender, MouseButtonEventArgs e)
