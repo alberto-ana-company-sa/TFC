@@ -38,3 +38,29 @@ C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\obj\Debug\TFC_2.csprojAssemblyRefe
 C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\bin\Debug\Syncfusion.Licensing.dll
 C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\bin\Debug\Syncfusion.SfProgressBar.WPF.dll
 C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\bin\Debug\Syncfusion.SfProgressBar.WPF.xml
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\bin\Debug\TFC_2.exe.config
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\bin\Debug\TFC_2.exe
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\bin\Debug\TFC_2.pdb
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\bin\Debug\CircularProgressBar.dll
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\bin\Debug\MySql.Data.dll
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\bin\Debug\Syncfusion.Licensing.dll
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\bin\Debug\Syncfusion.SfProgressBar.WPF.dll
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\bin\Debug\WinFormAnimation.dll
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\bin\Debug\Syncfusion.SfProgressBar.WPF.xml
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\TFC_2.csprojAssemblyReference.cache
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\MainWindow.g.cs
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Contrasenia_Olvidada.g.cs
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Home.g.cs
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\App.g.cs
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\TFC_2_MarkupCompile.cache
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\TFC_2_MarkupCompile.lref
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\MainWindow.baml
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Contrasenia_Olvidada.baml
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Home.baml
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\TFC_2.g.resources
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\TFC_2.Properties.Resources.resources
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\TFC_2.csproj.GenerateResource.cache
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\TFC_2.csproj.CoreCompileInputs.cache
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\TFC_2.csproj.CopyComplete
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\TFC_2.exe
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\TFC_2.pdb

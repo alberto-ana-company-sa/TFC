@@ -73,10 +73,41 @@
         <Label  Content="Pedidos no facturados" Grid.Column="1" HorizontalAlignment="Left" Margin="342,45,0,0" Grid.Row="1" VerticalAlignment="Top" Width="165" Grid.RowSpan="2"/>
         <Label Content="Total de ventas" Grid.Column="1" HorizontalAlignment="Left" Margin="928,45,0,0" Grid.Row="1" VerticalAlignment="Top" Width="145"/>
 
-        
-        <Label Content="Presupuestos de Venta" FontSize="14" FontWeight="Bold" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="44,45.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="172"/>
-        <Ellipse Grid.Column="1" Fill="White" HorizontalAlignment="Left" Height="184" Margin="89,99.4,0,0" Grid.Row="3" Stroke="#FF1AC200" VerticalAlignment="Top" Width="184" RenderTransformOrigin="-0.583,0.365" StrokeThickness="6"/>
-        <Label Name="lblPresupuesto_total_venta" Content="50%" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="50" Grid.Column="1" HorizontalAlignment="Left" Margin="104,112.4,0,0" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="-0.081,0.723" Width="154" Height="153"/>
+        <Ellipse Grid.Column="1" Fill="White" HorizontalAlignment="Left" Height="184" Margin="89,69.4,0,0" Grid.Row="3" Stroke="#FF1AC200" VerticalAlignment="Top" Width="184" RenderTransformOrigin="-0.583,0.365" StrokeThickness="6"/>
+        <Label Name="lblPresupuesto_total_venta" Content="50%" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="50" Grid.Column="1" HorizontalAlignment="Left" Margin="104,82.4,0,0" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="-0.081,0.723" Width="154" Height="153"/>
+        <Label Content="Anual" Grid.Column="1" HorizontalAlignment="Left" Margin="160,41.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="52"/>
+        <Label Content="Objetivo:" Grid.Column="1" HorizontalAlignment="Left" Margin="123,249.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="59"/>
+        <Label Name="objetivo_Presupuesto_venta_anual" Content="1.000.000" Grid.Column="1" HorizontalAlignment="Left" Margin="180,249.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="93"/>
+        <Label Content="Actual:" Grid.Column="1" HorizontalAlignment="Left" Margin="126,263.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="54"/>
+        <Label x:Name="actual_presupuesto_venta_anual" Content="500.000" Grid.Column="1" HorizontalAlignment="Left" Margin="179,264.4,0,0" Grid.Row="3" VerticalAlignment="Top" Height="24" Width="78"/>
+
+        <Ellipse Grid.Column="1" Fill="White" HorizontalAlignment="Left" Height="184" Margin="374,69.4,0,0" Grid.Row="3" Stroke="#FF1AC200" VerticalAlignment="Top" Width="184" RenderTransformOrigin="-0.583,0.365" StrokeThickness="6"/>
+        <Label x:Name="lblPorcentaje_Pedidos" Content="0%" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="50" Grid.Column="1" HorizontalAlignment="Left" Margin="389,82.4,0,0" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="-0.081,0.723" Width="154" Height="153"/>
+        <Label Content="Anual" Grid.Column="1" HorizontalAlignment="Left" Margin="445,41.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="52"/>
+        <Label Content="Objetivo:" Grid.Column="1" HorizontalAlignment="Left" Margin="408,249.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="59"/>
+        <Label x:Name="objetivo_Pedido_anual" Content="0,00" Grid.Column="1" HorizontalAlignment="Left" Margin="465,249.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="93"/>
+        <Label Content="Actual:" Grid.Column="1" HorizontalAlignment="Left" Margin="411,263.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="54"/>
+        <Label x:Name="actual_Pedido" Content="1500" Grid.Column="1" HorizontalAlignment="Left" Margin="464,264.4,0,0" Grid.Row="3" VerticalAlignment="Top" Height="24" Width="78"/>
+        <Label Content="Pedidos" Grid.Column="1" FontWeight="Bold" HorizontalAlignment="Left" Margin="357,13.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="57"/>
+
+        <Ellipse Grid.Column="1" Fill="White" HorizontalAlignment="Left" Height="184" Margin="640,71.4,0,0" Grid.Row="3" Stroke="#FF1AC200" VerticalAlignment="Top" Width="184" RenderTransformOrigin="-0.583,0.365" StrokeThickness="6"/>
+        <Label x:Name="lblPorcentaje_Albaranes" Content="9.347.37%" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="38" Grid.Column="1" HorizontalAlignment="Left" Margin="622,106.4,0,0" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="-0.081,0.723" Width="221" Height="115"/>
+        <Label Content="Anual" Grid.Column="1" HorizontalAlignment="Left" Margin="711,43.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="52"/>
+        <Label Content="Objetivo:" Grid.Column="1" HorizontalAlignment="Left" Margin="674,251.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="59"/>
+        <Label x:Name="objetivo_Albaranes" Content="20,000.00" Grid.Column="1" HorizontalAlignment="Left" Margin="731,251.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="93"/>
+        <Label Content="Actual:" Grid.Column="1" HorizontalAlignment="Left" Margin="677,265.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="54"/>
+        <Label Name="lblActual_Albaranes" Content="1,800,414.20" Grid.Column="1" HorizontalAlignment="Left" Margin="730,266.4,0,0" Grid.Row="3" VerticalAlignment="Top" Height="24" Width="78"/>
+        <Label Content="Albaranes" Grid.Column="1" FontWeight="Bold" HorizontalAlignment="Left" Margin="623,15.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="71"/>
+
+        <Ellipse Grid.Column="1" Fill="White" HorizontalAlignment="Left" Height="184" Margin="907,71.4,0,0" Grid.Row="3" Stroke="#FF1AC200" VerticalAlignment="Top" Width="184" RenderTransformOrigin="-0.583,0.365" StrokeThickness="6"/>
+        <Label x:Name="lblPorcentaje_Facturas" Content="78.71%" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="50" Grid.Column="1" HorizontalAlignment="Left" Margin="916,83.4,0,0" Grid.Row="3" VerticalAlignment="Top" RenderTransformOrigin="-0.081,0.723" Width="168" Height="153"/>
+        <Label Content="Actual" Grid.Column="1" HorizontalAlignment="Left" Margin="978,43.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="52"/>
+        <Label Content="Objetivo:" Grid.Column="1" HorizontalAlignment="Left" Margin="941,251.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="59"/>
+        <Label x:Name="objetivo_Facturas" Content="50,000.00" Grid.Column="1" HorizontalAlignment="Left" Margin="998,251.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="93"/>
+        <Label Content="Actual:" Grid.Column="1" HorizontalAlignment="Left" Margin="944,265.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="54"/>
+        <Label x:Name="lblActual_Facturas" Content="33,354.33" Grid.Column="1" HorizontalAlignment="Left" Margin="997,266.4,0,0" Grid.Row="3" VerticalAlignment="Top" Height="24" Width="78"/>
+        <Label Content="Facturas" Grid.Column="1" FontWeight="Bold" HorizontalAlignment="Left" Margin="890,15.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="71"/>
+        <Label Content="Presupuestos de Venta" Grid.Column="1" FontWeight="Bold" HorizontalAlignment="Left" Margin="61,15.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="147"/>
 
 
     </Grid>
