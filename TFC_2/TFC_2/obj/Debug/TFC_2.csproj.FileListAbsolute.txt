@@ -64,3 +64,9 @@ C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\TFC_2.csp
 C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\TFC_2.csproj.CopyComplete
 C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\TFC_2.exe
 C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\TFC_2.pdb
+C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\bin\Debug\LiveCharts.dll
+C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\bin\Debug\LiveCharts.pdb
+C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\bin\Debug\LiveCharts.xml
+C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\bin\Debug\LiveCharts.Wpf.xml
