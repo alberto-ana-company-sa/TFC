@@ -37,24 +37,106 @@ namespace TFC_2
                 
                 conexionBBDD.Open();
 
-                //MySqlDataReader reader = null;
-                MySqlCommand cmd = new MySqlCommand("SELECT * FROM empleados", conexionBBDD);
-                //reader = cmd.ExecuteReader();
+                // Grid de Albaranes Ventas
 
-                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-                DataSet ds = new DataSet();
-
-                da.Fill(ds);
-
-                grid_AlbaranesVenta_Copy1.ItemsSource = ds.Tables[0].DefaultView;
-
-                conexionBBDD.Close();
+                MySqlCommand cmd = new MySqlCommand("SELECT albaran_venta.Tipo, albaran_venta.Codigo, clientes.Nombre, clientes.Apellido1 Apellido, SUM(lineas_albaran_ventas.Precio) Importe, albaran_venta.Fecha " +
+                    "FROM albaran_venta, clientes, lineas_albaran_ventas " +
+                    "WHERE lineas_albaran_ventas.Codigo_Albaran_Venta = albaran_venta.Codigo AND clientes.Codigo = albaran_venta.Codigo_Cliente " +
+                    "GROUP BY albaran_venta.Codigo"
+                    , conexionBBDD);
                 
+
+                MySqlDataAdapter mySqlDataAdapter_AlbaranesVenta = new MySqlDataAdapter(cmd);
+                DataSet dataSetAlbaranVenta = new DataSet();
+
+                mySqlDataAdapter_AlbaranesVenta.Fill(dataSetAlbaranVenta);
+
+                grid_AlbaranesVenta.ItemsSource = dataSetAlbaranVenta.Tables[0].DefaultView;
+
+                // Grid de Facturas Ventas
+
+                MySqlCommand cmd2 = new MySqlCommand("SELECT factura_venta.Tipo, factura_venta.Codigo, clientes.Nombre, clientes.Apellido1 Apellido, SUM(lineas_factura_venta.Precio) Importe, factura_venta.Fecha, factura_venta.Codigo_Albaran FROM factura_venta, clientes, lineas_factura_venta " +
+                    "WHERE clientes.Codigo = factura_venta.Codigo_Cliente AND lineas_factura_venta.Codigo_Factura_Ventas = factura_venta.Codigo " +
+                    "GROUP BY factura_venta.Codigo"
+                    , conexionBBDD);
+                
+
+                MySqlDataAdapter mySqlDataAdapter_FacturasVentas = new MySqlDataAdapter(cmd2);
+                DataSet dataSet_FacturasVentas = new DataSet();
+
+                mySqlDataAdapter_FacturasVentas.Fill(dataSet_FacturasVentas);
+
+                grid_FacturasVenta.ItemsSource = dataSet_FacturasVentas.Tables[0].DefaultView;
+
+                // Circulo Presupuesto de venta
+                /*
+                 
+                 Objetivo = 1000 €
+                 Ventas = 500 €
+
+                 100 % - 1000 €
+                 x % --- 500 €
+                 500 * 100(%) / 1000 (€) = 50 %
+
+                lo que tenemos * 100% / objetivo = %
+                 */
+
+                MySqlDataReader reader = null;
+                MySqlCommand consultaPresupuestoVenta = new MySqlCommand("SELECT SUM(lineas_factura_venta.Precio) FROM lineas_factura_venta", conexionBBDD);
+                reader = consultaPresupuestoVenta.ExecuteReader();
+
+                reader.Read();
+
+
+                int valor = (Convert.ToInt32(reader.GetString(0)) * 100) / Convert.ToInt32(objetivo_Presupuesto_venta_anual.Content);
+
+                grafica_Presupuesto_Venta.Value = valor;
+                actual_presupuesto_venta_anual.Content = reader.GetString(0);
+                conexionBBDD.Close();
             }
             catch (MySqlException ex)
             {
                 MessageBox.Show(ex.ToString());
             }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             // -------------------------------------------------------------------------------------------------------------------- GRAFICA DE BARRAS
             SeriesCollection = new SeriesCollection
@@ -82,33 +164,7 @@ namespace TFC_2
             DataContext = this;
 
         }
-        // -------------------------------------------------------------------------------------------------------------------- GRAFICA DE BARRAS
-
-            /*
-        public void gird_Prueba()
-        {
-            string cadenaConexion = "server=localhost;database=lynse;uid=root;pwd=\"\";";
-            MySqlConnection conexionBBDD = new MySqlConnection(cadenaConexion);
-            try
-            {
-                conexionBBDD.Open();
-
-                MySqlDataReader reader = null;
-                MySqlCommand cmd = new MySqlCommand("SELECT * FROM usuario", conexionBBDD);
-                reader = cmd.ExecuteReader();
-
-
-                grid_AlbaranesVenta_Copy1.ItemsSource = reader.ToString();
-
-                conexionBBDD.Close();
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }
-        */
-
+        
         public CartesianChart grafica1 { get; set; }
         public SeriesCollection SeriesCollection { get; set; }
         public string[] Labels { get; set; }

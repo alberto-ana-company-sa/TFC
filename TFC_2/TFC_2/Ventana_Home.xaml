@@ -77,7 +77,7 @@
 
         <lvc:Gauge Name="grafica_Presupuesto_Venta" Grid.Row="3" Grid.Column="1" Margin="87,66.4,0,0" Height="184" Width="184"
                    Uses360Mode="True"
-                   From="0" To="93" Value="70" FontSize="15" ToColor="#FF1AC200" HorizontalAlignment="Left" VerticalAlignment="Top">
+                   From="0" To="100" Value="50" FontSize="15" ToColor="#FF1AC200" HorizontalAlignment="Left" VerticalAlignment="Top">
             <lvc:Gauge.BindingGroup>
                 <BindingGroup/>
             </lvc:Gauge.BindingGroup>
@@ -91,7 +91,7 @@
         </lvc:Gauge>
         <Label Content="Anual" Grid.Column="1" HorizontalAlignment="Left" Margin="160,41.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="52"/>
         <Label Content="Objetivo:" Grid.Column="1" HorizontalAlignment="Left" Margin="123,249.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="59"/>
-        <Label Name="objetivo_Presupuesto_venta_anual" Content="1.000.000" Grid.Column="1" HorizontalAlignment="Left" Margin="180,249.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="93"/>
+        <Label Name="objetivo_Presupuesto_venta_anual" Content="200" Grid.Column="1" HorizontalAlignment="Left" Margin="180,249.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="93"/>
         <Label Content="Actual:" Grid.Column="1" HorizontalAlignment="Left" Margin="126,263.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="54"/>
         <Label x:Name="actual_presupuesto_venta_anual" Content="500.000" Grid.Column="1" HorizontalAlignment="Left" Margin="179,264.4,0,0" Grid.Row="3" VerticalAlignment="Top" Height="24" Width="78"/>
 
@@ -162,7 +162,13 @@
 
         <!-- ................................................................................................................................................................................................................. -->
 
-        <DataGrid x:Name="grid_AlbaranesVenta" HorizontalAlignment="Right" Margin="0,28.8,544,0" Grid.Row="4" Width="457" Background="Red" Height="162" VerticalAlignment="Top" Grid.Column="1"/>
+
+
+
+
+        <DataGrid x:Name="grid_AlbaranesVenta" HorizontalAlignment="Right" Margin="0,28.8,1067,0" Grid.Row="4" Width="426" Height="162" VerticalAlignment="Top" Grid.ColumnSpan="2" BorderBrush="#FFCBCBCB" Background="White" IsEnabled="False"/>
+
+        <DataGrid x:Name="grid_FacturasVenta" HorizontalAlignment="Right" Margin="0,28.8,541,0" Grid.Row="4" Width="502" Height="162" VerticalAlignment="Top" Grid.Column="1" Background="White" BorderBrush="#FFCBCBCB" IsEnabled="False"/>
 
         <lvc:CartesianChart Name="graf_Barras" Series="{Binding SeriesCollection, BindingGroupName='Grafica1'}" LegendLocation="Left"  Grid.Column="1" Grid.Row="3" Width="500" Margin="774,317.4,0,0" Grid.RowSpan="2" HorizontalAlignment="Left" Height="201" VerticalAlignment="Top">
             <lvc:CartesianChart.AxisX>
@@ -172,11 +178,6 @@
                 <lvc:Axis Title="Sold Apps" LabelFormatter="{Binding Formatter}"></lvc:Axis>
             </lvc:CartesianChart.AxisY>
         </lvc:CartesianChart>
-
-        <DataGrid x:Name="grid_AlbaranesVenta_Copy1" HorizontalAlignment="Right" Margin="0,28.8,1016,0" Grid.Row="4" Width="457" Background="Red" Height="162" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-
-
-
 
     </Grid>
 </Window>
