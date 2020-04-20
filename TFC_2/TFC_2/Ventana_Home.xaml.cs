@@ -92,76 +92,109 @@ namespace TFC_2
 
                 grafica_Presupuesto_Venta.Value = valor;
                 actual_presupuesto_venta_anual.Content = reader.GetString(0);
+
+
+
+                reader.Close();
+
+
+
+
+
+                // -------------------------------------------------------------------------------------------------------------------- GRAFICA DE BARRAS
+
+                MySqlDataReader leerFacturas = null;
+                MySqlCommand consultaGrafica = new MySqlCommand("SELECT MONTH(factura_venta.Fecha) Mes, COUNT(*), YEAR(factura_venta.Fecha) anio FROM factura_venta GROUP BY Mes", conexionBBDD);
+                leerFacturas = consultaGrafica.ExecuteReader();
+                int contador = 0;
+                int anio = 0;
+                int temp = 0;
+                
+                
+                while (leerFacturas.Read())
+                {
+                    temp = Convert.ToInt32(leerFacturas.GetString(2));
+
+                    if (contador == 0)
+                    {
+                        SeriesCollection = new SeriesCollection
+                        {
+                            new ColumnSeries
+                            {
+                                Title = leerFacturas.GetString(2),
+                            Values = new ChartValues<double> {0}
+                            }
+                        };
+                        for (int i = 1; i <= Convert.ToInt32(leerFacturas.GetString(0)) ;i++)
+                        {
+                            
+                            if (i == Convert.ToInt32(leerFacturas.GetString(0)))
+                            {
+                                SeriesCollection[0].Values.Add(Convert.ToDouble(leerFacturas.GetString(1)));
+                            }
+                            else
+                            {
+                                SeriesCollection[0].Values.Add(0d);
+                            }
+                        }
+                        contador++;
+                        anio = Convert.ToInt32(leerFacturas.GetString(2));
+                    }
+                    else if(anio != temp){
+                        SeriesCollection.Add(new ColumnSeries
+                        {
+                            Title = leerFacturas.GetString(2),
+                            Values = new ChartValues<double> {  }
+                        });
+                        anio = Convert.ToInt32(leerFacturas.GetString(2));
+                        for (int i = 1; i <= Convert.ToInt32(leerFacturas.GetString(0)); i++)
+                        {
+
+                            if (i == Convert.ToInt32(leerFacturas.GetString(0)))
+                            {
+                                SeriesCollection[contador-1].Values.Add(Convert.ToDouble(leerFacturas.GetString(1)));
+                            }
+                            else
+                            {
+                                SeriesCollection[contador-1].Values.Add(0d);
+                            }
+                        }
+                        contador++;
+                    }
+                    else
+                    {
+                        for (int i = 1; i <= Convert.ToInt32(leerFacturas.GetString(0)); i++)
+                        {
+
+                            if (i == Convert.ToInt32(leerFacturas.GetString(0)))
+                            {
+                                SeriesCollection[contador-1].Values.Add(Convert.ToDouble(leerFacturas.GetString(1)));
+                            }
+                            else
+                            {
+                                SeriesCollection[contador-1].Values.Add(0d);
+                            }
+                        }
+                    }
+                    
+                }
+
+                
+                Labels = new[] { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" };
+                Formatter = value => value.ToString("N");
+
+                DataContext = this;
+
+                leerFacturas.Close();
+
+                //also adding values updates and animates the chart automatically
+               
                 conexionBBDD.Close();
             }
             catch (MySqlException ex)
             {
                 MessageBox.Show(ex.ToString());
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            // -------------------------------------------------------------------------------------------------------------------- GRAFICA DE BARRAS
-            SeriesCollection = new SeriesCollection
-            {
-                new ColumnSeries
-                {
-                    Title = "2015",
-                    Values = new ChartValues<double> { 10, 50, 39, 50 }
-                }
-            };
-
-            //adding series will update and animate the chart automatically
-            SeriesCollection.Add(new ColumnSeries
-            {
-                Title = "2016",
-                Values = new ChartValues<double> { 11, 56, 42 }
-            });
-
-            //also adding values updates and animates the chart automatically
-            SeriesCollection[1].Values.Add(48d);
-
-            Labels = new[] { "Maria", "Susan", "Charles", "Frida" };
-            Formatter = value => value.ToString("N");
-
-            DataContext = this;
 
         }
         
