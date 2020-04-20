@@ -70,3 +70,9 @@ C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\bin\Debug\LiveCharts.pdb
 C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\bin\Debug\LiveCharts.xml
 C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\bin\Debug\LiveCharts.Wpf.pdb
 C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\bin\Debug\LiveCharts.dll
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\bin\Debug\LiveCharts.pdb
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\bin\Debug\LiveCharts.xml
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\bin\Debug\LiveCharts.Wpf.xml

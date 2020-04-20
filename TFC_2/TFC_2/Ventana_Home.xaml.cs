@@ -28,8 +28,16 @@ namespace TFC_2
         public Ventana_Home()
         {
             InitializeComponent();
+            GraficaPresupuestoCompraAnual();
+            GraficaPedidosTotalAnual();
+            GraficaFacturasTotalAnual();
+            ValorTotalFacturadoLabelVerde();
+            ValorTotalPedidosNoFacturasLabelAmarillo();
+            ValorTotalAlbaranesPendientesDeCobroLabelAzul();
+            ValorTotalNumeroPedidosFacturadosLabelNaranja();
 
-            
+
+
             string cadenaConexion = "server=localhost;database=lynse;uid=root;pwd=\"\";";
             MySqlConnection conexionBBDD = new MySqlConnection(cadenaConexion);
             try
@@ -84,17 +92,10 @@ namespace TFC_2
                 MySqlDataReader reader = null;
                 MySqlCommand consultaPresupuestoVenta = new MySqlCommand("SELECT SUM(lineas_factura_venta.Precio) FROM lineas_factura_venta", conexionBBDD);
                 reader = consultaPresupuestoVenta.ExecuteReader();
-
                 reader.Read();
-
-
                 int valor = (Convert.ToInt32(reader.GetString(0)) * 100) / Convert.ToInt32(objetivo_Presupuesto_venta_anual.Content);
-
                 grafica_Presupuesto_Venta.Value = valor;
                 actual_presupuesto_venta_anual.Content = reader.GetString(0);
-
-
-
                 reader.Close();
 
 
@@ -202,5 +203,196 @@ namespace TFC_2
         public SeriesCollection SeriesCollection { get; set; }
         public string[] Labels { get; set; }
         public Func<double, string> Formatter { get; set; }
+
+
+
+        public  void GraficaPresupuestoCompraAnual()
+        {
+            string cadenaConexion = "server=localhost;database=lynse;uid=root;pwd=\"\";";
+            MySqlConnection conexionBBDD = new MySqlConnection(cadenaConexion);
+            try
+            {
+                 conexionBBDD.Open();
+                MySqlDataReader reader = null;
+                MySqlCommand consultaPresupuestoCompra = new MySqlCommand("SELECT SUM(lineas_factura_compras.Precio) FROM lineas_factura_compras", conexionBBDD);
+                reader = consultaPresupuestoCompra.ExecuteReader();
+                reader.Read();
+                if (!reader.IsDBNull(0) )
+                {
+                    int valor = (Convert.ToInt32(reader.GetString(0)) * 100) / Convert.ToInt32(objetivo_PresupuestoCompra_anual.Content);
+                    grafica_Presupuesto_Compra.Value = valor;
+                    actual_PresupuestoCompra.Content = reader.GetString(0);
+                }
+               else 
+                {
+                    grafica_Presupuesto_Compra.Value = 0;
+                } 
+                reader.Close();
+                conexionBBDD.Close();
+            }
+
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        public void GraficaPedidosTotalAnual()
+        {
+            string cadenaConexion = "server=localhost;database=lynse;uid=root;pwd=\"\";";
+            MySqlConnection conexionBBDD = new MySqlConnection(cadenaConexion);
+            try
+            {
+                conexionBBDD.Open();
+                MySqlDataReader reader = null;
+                MySqlCommand consultaPedidosTotalAnual = new MySqlCommand("SELECT Codigo FROM pedido_venta", conexionBBDD);
+                reader = consultaPedidosTotalAnual.ExecuteReader();
+                int contador = 0;
+              
+                while (reader.Read())
+                {
+                    contador++;
+                }
+                int valor = (contador * 100) / Convert.ToInt32(objetivo_PedidosTotales.Content);
+                grafica_PedidosTotales.Value = valor;
+                lblActual_PedidosTotales.Content = contador;
+                reader.Close();
+                conexionBBDD.Close();
+            }
+
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        public void GraficaFacturasTotalAnual()
+        {
+            string cadenaConexion = "server=localhost;database=lynse;uid=root;pwd=\"\";";
+            MySqlConnection conexionBBDD = new MySqlConnection(cadenaConexion);
+            try
+            {
+                conexionBBDD.Open();
+                MySqlDataReader reader = null;
+                MySqlCommand consultaFacturaTotalAnual = new MySqlCommand("SELECT Codigo FROM factura_venta", conexionBBDD);
+                reader = consultaFacturaTotalAnual.ExecuteReader();
+                int contador = 0;
+
+                while (reader.Read())
+                {
+                    contador++;
+                }
+                int valor = (contador * 100) / Convert.ToInt32(objetivo_Facturas.Content);
+                grafica_Facturas.Value = valor;
+                lblActual_Facturas.Content = contador;
+                reader.Close();
+                conexionBBDD.Close();
+            }
+
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+
+        public void ValorTotalFacturadoLabelVerde()
+        {
+            string cadenaConexion = "server=localhost;database=lynse;uid=root;pwd=\"\";";
+            MySqlConnection conexionBBDD = new MySqlConnection(cadenaConexion);
+            try
+            {
+                conexionBBDD.Open();
+                MySqlDataReader reader = null;
+                MySqlCommand consultaPedidosTotalAnual = new MySqlCommand("SELECT SUM(lineas_factura_venta.Precio) FROM lineas_factura_venta", conexionBBDD);
+                reader = consultaPedidosTotalAnual.ExecuteReader();
+                reader.Read();
+
+                LblVerdeTotalFactura.Content = reader.GetString(0) + "€";
+                
+                reader.Close();
+                conexionBBDD.Close();
+            }
+
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        public void ValorTotalPedidosNoFacturasLabelAmarillo()
+        {
+            string cadenaConexion = "server=localhost;database=lynse;uid=root;pwd=\"\";";
+            MySqlConnection conexionBBDD = new MySqlConnection(cadenaConexion);
+            try
+            {
+                conexionBBDD.Open();
+                MySqlDataReader reader = null;
+                MySqlCommand consultaAlbaranesNoFacturados = new MySqlCommand("SELECT COUNT(albaran_venta.Traspaso_factura) FROM albaran_venta Where albaran_venta.Traspaso_factura = 0 ", conexionBBDD);
+                reader = consultaAlbaranesNoFacturados.ExecuteReader();
+                reader.Read();
+
+                LblAmarilloTotalAlbaranesNoFacturados.Content = reader.GetString(0);
+
+                reader.Close();
+                conexionBBDD.Close();
+            }
+
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+    
+        public void ValorTotalAlbaranesPendientesDeCobroLabelAzul()
+        {
+            string cadenaConexion = "server=localhost;database=lynse;uid=root;pwd=\"\";";
+            MySqlConnection conexionBBDD = new MySqlConnection(cadenaConexion);
+            try
+            {
+                conexionBBDD.Open();
+                MySqlDataReader reader = null;
+                MySqlCommand consultaAlbaranesNoFacturados = new MySqlCommand("SELECT SUM(lineas_albaran_ventas.Precio)  " +
+                    "FROM lineas_albaran_ventas, albaran_venta" +
+                    " WHERE albaran_venta.Traspaso_Factura = 0 " +
+                    "AND albaran_venta.Codigo = lineas_albaran_ventas.Codigo_Albaran_Venta", conexionBBDD);
+                reader = consultaAlbaranesNoFacturados.ExecuteReader();
+                reader.Read();
+
+                LblAzulAlbaranesPendienteDeCobro.Content = reader.GetString(0) + " €";
+
+                reader.Close();
+                conexionBBDD.Close();
+            }
+
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+        
+        public void ValorTotalNumeroPedidosFacturadosLabelNaranja()
+        {
+            string cadenaConexion = "server=localhost;database=lynse;uid=root;pwd=\"\";";
+            MySqlConnection conexionBBDD = new MySqlConnection(cadenaConexion);
+            try
+            {
+                conexionBBDD.Open();
+                MySqlDataReader reader = null;
+                MySqlCommand consultaAlbaranesNoFacturados = new MySqlCommand("SELECT COUNT(factura_venta.Codigo) FROM factura_venta", conexionBBDD);
+                reader = consultaAlbaranesNoFacturados.ExecuteReader();
+                reader.Read();
+
+                LblNaranjaNumeroTotalDeFacturas.Content = reader.GetString(0);
+
+                reader.Close();
+                conexionBBDD.Close();
+            }
+
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }

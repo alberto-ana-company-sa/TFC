@@ -8,7 +8,7 @@
         xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         mc:Ignorable="d"
         Title="LYNSE" Height="809.953" Width="1510.724" WindowState="Maximized">
-    <Grid>
+    <Grid Margin="1,0,-1,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="448*"/>
@@ -63,16 +63,16 @@
         <Image Source="factura.png" Width="30" HorizontalAlignment="Left" Margin="43,249.4,0,0" Grid.Column="0" Grid.Row="3" Height="50" VerticalAlignment="Top"/>
 
 
-        <Label  x:Name="LblVerde" Content="Label" Grid.Column="1" Margin="45,10,0,0" Grid.Row="2" VerticalAlignment="Top" Height="87" BorderBrush="#FFF70202" Background="#FF09D446" HorizontalAlignment="Left" Width="294"/>
-        <Label x:Name="LblAmarillo" Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="339,10,0,0" Grid.Row="2" VerticalAlignment="Top" Height="87" Width="293" Background="#FFF0F127"/>
-        <Label  x:Name="LblAzul" Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="631,10,0,0" Grid.Row="2" VerticalAlignment="Top" Height="87" Width="296" BorderBrush="#FFF70202" Background="#FF6570F1"/>
-        <Label x:Name="LblNaranja" Content="label" Grid.Column="1" HorizontalAlignment="Left" Margin="927,10,0,0" Grid.Row="2" VerticalAlignment="Top" Height="87" Width="293" Background="#FFF7A002"/>
+        <Label  x:Name="LblVerdeTotalFactura" Content="" Grid.Column="1" Margin="349,9.8,0,0" Grid.Row="2" VerticalAlignment="Top" Height="87" BorderBrush="#FFF7A002" Background="#FFF7A002" HorizontalAlignment="Left" Width="294" FontSize="25" Foreground="White"/>
+        <Label x:Name="LblAmarilloTotalAlbaranesNoFacturados" Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="643,9.8,0,0" Grid.Row="2" VerticalAlignment="Top" Height="87" Width="293" Background="#FFEFE43C" BorderBrush="#FFF0F127" Foreground="White" FontSize="25"/>
+        <Label  x:Name="LblAzulAlbaranesPendienteDeCobro" Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="935,9.8,0,0" Grid.Row="2" VerticalAlignment="Top" Height="87" Width="296" BorderBrush="#FF6570F1" Background="#FF6570F1" Foreground="White" FontSize="25"/>
+        <Label x:Name="LblNaranjaNumeroTotalDeFacturas" Content="label" HorizontalAlignment="Left" Margin="56,9.8,0,0" Grid.Row="2" VerticalAlignment="Top" Height="87" Width="293" Background="#FF09D446" Foreground="White" BorderBrush="#FF09D446" FontSize="25" Grid.Column="1"/>
 
 
-        <Label Content="Total Facturado" Grid.Column="1" HorizontalAlignment="Left" Margin="44,45,0,0" Grid.Row="1" VerticalAlignment="Top" Width="145" Grid.RowSpan="2"/>
-        <Label Content="Pendiente de cobro" Grid.Column="1" HorizontalAlignment="Left" Margin="636,45,0,0" Grid.Row="1" VerticalAlignment="Top" Width="145"/>
-        <Label  Content="Pedidos no facturados" Grid.Column="1" HorizontalAlignment="Left" Margin="342,45,0,0" Grid.Row="1" VerticalAlignment="Top" Width="165" Grid.RowSpan="2"/>
-        <Label Content="Total de ventas" Grid.Column="1" HorizontalAlignment="Left" Margin="928,45,0,0" Grid.Row="1" VerticalAlignment="Top" Width="145"/>
+        <Label Content="Total facturado" Grid.Column="1" HorizontalAlignment="Left" Margin="348,44.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="145" Grid.RowSpan="2"/>
+        <Label Content="Pendiente de cobro" Grid.Column="1" HorizontalAlignment="Left" Margin="940,44.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="145"/>
+        <Label  Content="Albaranes no facturados" Grid.Column="1" HorizontalAlignment="Left" Margin="646,44.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="165" Grid.RowSpan="2"/>
+        <Label Content="Total de ventas facturadas" HorizontalAlignment="Left" Margin="57,45.6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="149" Grid.RowSpan="2" Grid.Column="1"/>
 
 
         <lvc:Gauge Name="grafica_Presupuesto_Venta" Grid.Row="3" Grid.Column="1" Margin="87,66.4,0,0" Height="184" Width="184"
@@ -95,7 +95,7 @@
         <Label Content="Actual:" Grid.Column="1" HorizontalAlignment="Left" Margin="126,263.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="54"/>
         <Label x:Name="actual_presupuesto_venta_anual" Content="500.000" Grid.Column="1" HorizontalAlignment="Left" Margin="179,264.4,0,0" Grid.Row="3" VerticalAlignment="Top" Height="24" Width="78"/>
 
-        <lvc:Gauge Name="grafica_Pedidos" Grid.Row="3" Grid.Column="1" Margin="374,66.4,0,0" Height="184" Width="184"
+        <lvc:Gauge Name="grafica_Presupuesto_Compra" Grid.Row="3" Grid.Column="1" Margin="374,66.4,0,0" Height="184" Width="184"
                    Uses360Mode="True"
                    From="0" To="93" Value="70" FontSize="15" ToColor="#FF1AC200" HorizontalAlignment="Left" VerticalAlignment="Top">
             <lvc:Gauge.BindingGroup>
@@ -111,12 +111,12 @@
         </lvc:Gauge>
         <Label Content="Anual" Grid.Column="1" HorizontalAlignment="Left" Margin="445,41.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="52"/>
         <Label Content="Objetivo:" Grid.Column="1" HorizontalAlignment="Left" Margin="408,249.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="59"/>
-        <Label x:Name="objetivo_Pedido_anual" Content="0,00" Grid.Column="1" HorizontalAlignment="Left" Margin="465,249.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="93"/>
+        <Label x:Name="objetivo_PresupuestoCompra_anual" Content="200" Grid.Column="1" HorizontalAlignment="Left" Margin="465,249.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="93"/>
         <Label Content="Actual:" Grid.Column="1" HorizontalAlignment="Left" Margin="411,263.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="54"/>
-        <Label x:Name="actual_Pedido" Content="1500" Grid.Column="1" HorizontalAlignment="Left" Margin="464,264.4,0,0" Grid.Row="3" VerticalAlignment="Top" Height="24" Width="78"/>
-        <Label Content="Pedidos" Grid.Column="1" FontWeight="Bold" HorizontalAlignment="Left" Margin="357,13.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="57"/>
+        <Label x:Name="actual_PresupuestoCompra" Content="1500" Grid.Column="1" HorizontalAlignment="Left" Margin="464,264.4,0,0" Grid.Row="3" VerticalAlignment="Top" Height="24" Width="78"/>
+        <Label Content="Presupuesto de Compra" Grid.Column="1" FontWeight="Bold" HorizontalAlignment="Left" Margin="324,13.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="146"/>
 
-        <lvc:Gauge Name="grafica_Albaranes" Grid.Row="3" Grid.Column="1" Margin="639,68.4,0,0" Height="184" Width="184"
+        <lvc:Gauge Name="grafica_PedidosTotales" Grid.Row="3" Grid.Column="1" Margin="639,68.4,0,0" Height="184" Width="184"
                    Uses360Mode="True"
                    From="0" To="93" Value="70" FontSize="15" ToColor="#FF1AC200" HorizontalAlignment="Left" VerticalAlignment="Top">
             <lvc:Gauge.BindingGroup>
@@ -132,10 +132,10 @@
         </lvc:Gauge>
         <Label Content="Anual" Grid.Column="1" HorizontalAlignment="Left" Margin="711,43.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="52"/>
         <Label Content="Objetivo:" Grid.Column="1" HorizontalAlignment="Left" Margin="674,251.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="59"/>
-        <Label x:Name="objetivo_Albaranes" Content="20,000.00" Grid.Column="1" HorizontalAlignment="Left" Margin="731,251.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="93"/>
+        <Label x:Name="objetivo_PedidosTotales" Content="200" Grid.Column="1" HorizontalAlignment="Left" Margin="731,251.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="93"/>
         <Label Content="Actual:" Grid.Column="1" HorizontalAlignment="Left" Margin="677,265.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="54"/>
-        <Label Name="lblActual_Albaranes" Content="1,800,414.20" Grid.Column="1" HorizontalAlignment="Left" Margin="730,266.4,0,0" Grid.Row="3" VerticalAlignment="Top" Height="24" Width="78"/>
-        <Label Content="Albaranes" Grid.Column="1" FontWeight="Bold" HorizontalAlignment="Left" Margin="623,15.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="71"/>
+        <Label Name="lblActual_PedidosTotales" Content="1500" Grid.Column="1" HorizontalAlignment="Left" Margin="730,266.4,0,0" Grid.Row="3" VerticalAlignment="Top" Height="24" Width="78"/>
+        <Label Content="Pedidos" Grid.Column="1" FontWeight="Bold" HorizontalAlignment="Left" Margin="623,15.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="71"/>
 
         <lvc:Gauge Name="grafica_Facturas" Grid.Row="3" Grid.Column="1" Margin="909,68.4,0,0" Height="184" Width="184"
                    Uses360Mode="True"
@@ -153,9 +153,9 @@
         </lvc:Gauge>
         <Label Content="Actual" Grid.Column="1" HorizontalAlignment="Left" Margin="978,43.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="52"/>
         <Label Content="Objetivo:" Grid.Column="1" HorizontalAlignment="Left" Margin="941,251.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="59"/>
-        <Label x:Name="objetivo_Facturas" Content="50,000.00" Grid.Column="1" HorizontalAlignment="Left" Margin="998,251.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="93"/>
+        <Label x:Name="objetivo_Facturas" Content="10" Grid.Column="1" HorizontalAlignment="Left" Margin="998,251.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="93"/>
         <Label Content="Actual:" Grid.Column="1" HorizontalAlignment="Left" Margin="944,265.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="54"/>
-        <Label x:Name="lblActual_Facturas" Content="33,354.33" Grid.Column="1" HorizontalAlignment="Left" Margin="997,266.4,0,0" Grid.Row="3" VerticalAlignment="Top" Height="24" Width="78"/>
+        <Label x:Name="lblActual_Facturas" Content="1500" Grid.Column="1" HorizontalAlignment="Left" Margin="997,266.4,0,0" Grid.Row="3" VerticalAlignment="Top" Height="24" Width="78"/>
         <Label Content="Facturas" Grid.Column="1" FontWeight="Bold" HorizontalAlignment="Left" Margin="890,15.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="71"/>
         <Label Content="Presupuestos de Venta" Grid.Column="1" FontWeight="Bold" HorizontalAlignment="Left" Margin="61,15.4,0,0" Grid.Row="3" VerticalAlignment="Top" Width="147"/>
 
@@ -170,7 +170,7 @@
 
         <DataGrid x:Name="grid_FacturasVenta" HorizontalAlignment="Right" Margin="0,28.8,541,0" Grid.Row="4" Width="502" Height="162" VerticalAlignment="Top" Grid.Column="1" Background="White" BorderBrush="#FFCBCBCB" IsEnabled="False"/>
 
-        <lvc:CartesianChart Name="graf_Barras" Series="{Binding SeriesCollection, BindingGroupName='Grafica1'}" LegendLocation="Left"  Grid.Column="1" Grid.Row="3" Width="500" Margin="774,317.4,0,0" Grid.RowSpan="2" HorizontalAlignment="Left" Height="201" VerticalAlignment="Top">
+        <lvc:CartesianChart Name="graf_Barras" Series="{Binding SeriesCollection, BindingGroupName='Grafica1'}" LegendLocation="Left"  Grid.Column="1" Grid.Row="3" Width="500" Margin="799,317.4,0,0" Grid.RowSpan="2" HorizontalAlignment="Left" Height="201" VerticalAlignment="Top">
             <lvc:CartesianChart.AxisX>
                 <lvc:Axis Title="Número de ventas por mes" Labels="{Binding Labels}"></lvc:Axis>
             </lvc:CartesianChart.AxisX>
@@ -178,6 +178,8 @@
                 <lvc:Axis Title="" LabelFormatter="{Binding Formatter}"></lvc:Axis>
             </lvc:CartesianChart.AxisY>
         </lvc:CartesianChart>
+        <Label Content="Albaranes" Margin="43,6.8,0,0" Grid.Row="4" Grid.ColumnSpan="2" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="216"/>
+        <Label Content="Facturas" Grid.Column="1" HorizontalAlignment="Left" Margin="295,6.8,0,0" Grid.Row="4" VerticalAlignment="Top" Width="150"/>
 
     </Grid>
 </Window>
