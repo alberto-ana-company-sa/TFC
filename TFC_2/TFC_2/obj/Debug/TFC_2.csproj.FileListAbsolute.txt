@@ -76,3 +76,7 @@ C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\bin\Debug\LiveChart
 C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\bin\Debug\LiveCharts.xml
 C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\bin\Debug\LiveCharts.Wpf.pdb
 C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_listado_Clientes.g.cs
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_listado_Clientes.baml
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_listado_Proveedores.g.cs
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_listado_Proveedores.baml

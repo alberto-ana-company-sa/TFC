@@ -394,5 +394,17 @@ namespace TFC_2
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void Label_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Ventana_listado_Clientes ventanaClientes = new Ventana_listado_Clientes();
+            ventanaClientes.Show();
+        }
+
+        private void Label_PreviewMouseDown_1(object sender, MouseButtonEventArgs e)
+        {
+            Ventana_listado_Proveedores ventanaProveedores = new Ventana_listado_Proveedores();
+            ventanaProveedores.Show();
+        }
     }
 }

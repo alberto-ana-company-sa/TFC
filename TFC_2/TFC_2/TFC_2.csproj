@@ -84,6 +84,12 @@
     <Compile Include="Ventana_Home.xaml.cs">
       <DependentUpon>Ventana_Home.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Ventana_listado_Clientes.xaml.cs">
+      <DependentUpon>Ventana_listado_Clientes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_listado_Proveedores.xaml.cs">
+      <DependentUpon>Ventana_listado_Proveedores.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -101,6 +107,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Ventana_Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventana_listado_Clientes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventana_listado_Proveedores.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -158,6 +172,25 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="factura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ClientesG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="lupita.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="salir.png" />
+    <Resource Include="user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BuscarW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AnadirW.png" />
+    <Resource Include="AyudaW.png" />
+    <Resource Include="EliminarW.png" />
+    <Resource Include="ModificarW.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
