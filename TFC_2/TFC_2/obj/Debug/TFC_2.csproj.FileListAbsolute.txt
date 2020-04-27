@@ -80,3 +80,17 @@ C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_l
 C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_listado_Clientes.baml
 C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_listado_Proveedores.g.cs
 C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_listado_Proveedores.baml
+C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\obj\Debug\Ventana_listado_Clientes.g.cs
+C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\obj\Debug\Ventana_listado_Proveedores.g.cs
+C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\obj\Debug\Ventana_listado_Clientes.baml
+C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\obj\Debug\Ventana_listado_Proveedores.baml
+C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\obj\Debug\Ventana_Cliente_Anadir.g.cs
+C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\obj\Debug\Ventana_Cliente_Anadir.baml
+C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\obj\Debug\Ventana_Ayuda.g.cs
+C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\obj\Debug\Ventana_Ayuda.baml
+C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\obj\Debug\Ventana_Cliente_Email.g.cs
+C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\obj\Debug\Ventana_Cliente_Email.baml
+C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\obj\Debug\Ventana_Cliente_Direccion.g.cs
+C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\obj\Debug\Ventana_Cliente_Telefono.g.cs
+C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\obj\Debug\Ventana_Cliente_Direccion.baml
+C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\obj\Debug\Ventana_Cliente_Telefono.baml

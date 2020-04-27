@@ -78,6 +78,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Ventana_Ayuda.xaml.cs">
+      <DependentUpon>Ventana_Ayuda.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Cliente_Anadir.xaml.cs">
+      <DependentUpon>Ventana_Cliente_Anadir.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Cliente_Direccion.xaml.cs">
+      <DependentUpon>Ventana_Cliente_Direccion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Cliente_Email.xaml.cs">
+      <DependentUpon>Ventana_Cliente_Email.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Cliente_Telefono.xaml.cs">
+      <DependentUpon>Ventana_Cliente_Telefono.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Ventana_Contrasenia_Olvidada.xaml.cs">
       <DependentUpon>Ventana_Contrasenia_Olvidada.xaml</DependentUpon>
     </Compile>
@@ -102,6 +117,26 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Ventana_Ayuda.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventana_Cliente_Anadir.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventana_Cliente_Direccion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventana_Cliente_Email.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventana_Cliente_Telefono.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Ventana_Contrasenia_Olvidada.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -191,6 +226,17 @@
     <Resource Include="AyudaW.png" />
     <Resource Include="EliminarW.png" />
     <Resource Include="ModificarW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AyudaG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="masG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="emailW.png" />
+    <Resource Include="telefonoW.png" />
+    <Resource Include="ubicacionW.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

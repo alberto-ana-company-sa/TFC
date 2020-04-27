@@ -8,9 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("anadirw.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("ayudaw.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("eliminarw.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("modificarw.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("emailw.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("telefonow.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("ubicacionw.png")]
 
 

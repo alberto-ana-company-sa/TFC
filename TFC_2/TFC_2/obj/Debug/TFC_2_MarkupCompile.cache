@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\
+C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\obj\Debug\
 TFC_2
 none
 false
 DEBUG;TRACE
-C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\App.xaml
-5-245967006
+C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\App.xaml
+10-1557798679
 
-9-1603300978
-22736510102
-MainWindow.xaml;Ventana_Contrasenia_Olvidada.xaml;Ventana_Home.xaml;Ventana_listado_Clientes.xaml;Ventana_listado_Proveedores.xaml;
+141905868669
+221447480092
+MainWindow.xaml;Ventana_Ayuda.xaml;Ventana_Cliente_Anadir.xaml;Ventana_Cliente_Direccion.xaml;Ventana_Cliente_Email.xaml;Ventana_Cliente_Telefono.xaml;Ventana_Contrasenia_Olvidada.xaml;Ventana_Home.xaml;Ventana_listado_Clientes.xaml;Ventana_listado_Proveedores.xaml;
 
 False
 

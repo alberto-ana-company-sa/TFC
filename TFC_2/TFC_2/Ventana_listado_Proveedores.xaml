@@ -13,30 +13,30 @@
         <Border BorderBrush="#FFEEEEEE" BorderThickness="1" HorizontalAlignment="Left" Height="98" Margin="50,97,0,0" VerticalAlignment="Top" Width="947" Background="#FFEEEEEE"/>
 
         <Label Content="Codigo de proveedor" HorizontalAlignment="Left" Margin="77,101,0,0" VerticalAlignment="Top" Width="166" Height="36" FontSize="16"/>
-        <TextBox x:Name="TBCodigo_Proveedor_Copy" HorizontalAlignment="Left" Height="24" Margin="83,144,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="130"/>
+        <TextBox x:Name="TBCodigo_Proveedor" HorizontalAlignment="Left" Height="24" Margin="83,144,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="130"/>
 
         <Label Content="Nombre de proveedor" HorizontalAlignment="Left" Margin="279,103,0,0" VerticalAlignment="Top" Width="171" Height="31" FontSize="16"/>
         <TextBox x:Name="TBNombre_Proveedor" HorizontalAlignment="Left" Height="23" Margin="280,143,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="250"/>
 
-        <Label Content="NIF" HorizontalAlignment="Left"  Margin="583,104,0,0"  VerticalAlignment="Top" Width="112" Height="31" FontSize="16"/>
-        <TextBox x:Name="TBNIF_Proveedor" HorizontalAlignment="Left" Height="23" Margin="588,143,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="234"/>
+        <Label Content="CIF" HorizontalAlignment="Left"  Margin="583,104,0,0"  VerticalAlignment="Top" Width="112" Height="31" FontSize="16"/>
+        <TextBox x:Name="TBCIF_Proveedor" HorizontalAlignment="Left" Height="23" Margin="588,143,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="234"/>
 
-        <Button  HorizontalAlignment="Left" Margin="868,129,0,0" VerticalAlignment="Top" Width="104" Height="36" Background="#FF09D446" BorderBrush="#FF09D446" Foreground="White">
+        <Button x:Name="btnBuscarProveedor" HorizontalAlignment="Left" Margin="868,129,0,0" VerticalAlignment="Top" Width="104" Height="36" Background="#FF09D446" BorderBrush="#FF09D446" Foreground="White" Click="btnBuscarProveedor_Click">
             <Image Source="BuscarW.png"></Image>
         </Button>
-        <DataGrid x:Name="DataGridProveedores" HorizontalAlignment="Left" Height="524" Margin="21,231,0,0" VerticalAlignment="Top" Width="985"/>
+        <DataGrid x:Name="DataGridProveedores" HorizontalAlignment="Left" Height="524" Margin="37,231,0,0" VerticalAlignment="Top" Width="960"/>
 
-        <Button HorizontalAlignment="Left" Height="42" Margin="713,55,0,0" VerticalAlignment="Top" Width="99" Background="Red">
+        <Button Name="btnEliminarProveedor" HorizontalAlignment="Left" Height="42" Margin="713,55,0,0" VerticalAlignment="Top" Width="99" Background="Red" Click="btnEliminarProveedor_Click">
             <Image Source="EliminarW.png"></Image>
         </Button>
-        <Button  HorizontalAlignment="Left"  Height="42" Margin="811,55,0,0" VerticalAlignment="Top" Width="99" Background="#FFFFAE00">
+        <Button x:Name="btnModificarCliente" HorizontalAlignment="Left"  Height="42" Margin="811,55,0,0" VerticalAlignment="Top" Width="99" Background="#FFFFAE00" Click="btnModificarCliente_Click">
             <Image Source="ModificarW.png"></Image>
 
         </Button>
-        <Button  HorizontalAlignment="Left" Height="42" Margin="909,55,0,0" VerticalAlignment="Top" Width="87" Background="#FF565657">
+        <Button x:Name="btnAyuda" HorizontalAlignment="Left" Height="42" Margin="909,55,0,0" VerticalAlignment="Top" Width="87" Background="#FF565657" Click="btnAyuda_Click">
             <Image Source="AyudaW.png"/>
         </Button>
-        <Button  HorizontalAlignment="Left" Height="42" Margin="615,55,0,0" VerticalAlignment="Top" Width="99" Background="#FF09D446">
+        <Button x:Name="btnAnadirProveedor" HorizontalAlignment="Left" Height="42" Margin="615,55,0,0" VerticalAlignment="Top" Width="99" Background="#FF09D446" Click="btnAnadirProveedor_Click">
             <Image Source="AnadirW.png"></Image>
         </Button>
     </Grid>

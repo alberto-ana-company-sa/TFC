@@ -45,7 +45,7 @@ namespace TFC_2
                 
                 conexionBBDD.Open();
 
-                // Grid de Albaranes Ventas
+                // Data Grid de Albaranes Ventas
 
                 MySqlCommand cmd = new MySqlCommand("SELECT albaran_venta.Tipo, albaran_venta.Codigo, clientes.Nombre, clientes.Apellido1 Apellido, SUM(lineas_albaran_ventas.Precio) Importe, albaran_venta.Fecha " +
                     "FROM albaran_venta, clientes, lineas_albaran_ventas " +
@@ -61,7 +61,7 @@ namespace TFC_2
 
                 grid_AlbaranesVenta.ItemsSource = dataSetAlbaranVenta.Tables[0].DefaultView;
 
-                // Grid de Facturas Ventas
+                // Data Grid de Facturas Ventas
 
                 MySqlCommand cmd2 = new MySqlCommand("SELECT factura_venta.Tipo, factura_venta.Codigo, clientes.Nombre, clientes.Apellido1 Apellido, SUM(lineas_factura_venta.Precio) Importe, factura_venta.Fecha, factura_venta.Codigo_Albaran FROM factura_venta, clientes, lineas_factura_venta " +
                     "WHERE clientes.Codigo = factura_venta.Codigo_Cliente AND lineas_factura_venta.Codigo_Factura_Ventas = factura_venta.Codigo " +
