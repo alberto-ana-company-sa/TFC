@@ -21,9 +21,12 @@ namespace TFC_2
     /// </summary>
     public partial class Ventana_listado_Proveedores : Window
     {
+        public static Ventana_listado_Proveedores v;
+
         public Ventana_listado_Proveedores()
         {
             InitializeComponent();
+            Ventana_listado_Proveedores.v = this;
             DatosDataGridProveedores();
 
         }

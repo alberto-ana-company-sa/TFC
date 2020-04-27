@@ -131,7 +131,6 @@ namespace TFC_2
             }
             else
             {
-                MessageBox.Show("A");
                 lbl_ERROR.Content = "OBLIGATORIO AGREGAR TELEFONO, DIRECCION Y EMAIL";
             }
             
