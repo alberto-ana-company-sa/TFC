@@ -406,5 +406,11 @@ namespace TFC_2
             Ventana_listado_Proveedores ventanaProveedores = new Ventana_listado_Proveedores();
             ventanaProveedores.Show();
         }
+
+        private void Label_PreviewMouseDown_2(object sender, MouseButtonEventArgs e)
+        {
+            Ventana_Listado_Articulos ventnaArticulos = new Ventana_Listado_Articulos();
+            ventnaArticulos.Show();
+        }
     }
 }

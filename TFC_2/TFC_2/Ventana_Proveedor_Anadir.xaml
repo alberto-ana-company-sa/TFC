@@ -9,7 +9,7 @@
         Icon="Lynse.png"  WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None">
     <Grid>
         <Label Content="Nombre de la empresa" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="67,120,0,0"/>
-        <TextBox Name="TB_NombreEmpresa" HorizontalAlignment="Left" Height="23" Margin="203,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="183" PreviewTextInput="TB_NombreCliente_PreviewTextInput"/>
+        <TextBox Name="TB_NombreEmpresa" HorizontalAlignment="Left" Height="23" Margin="203,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="183" />
         <Label Content="CIF" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="67,150,0,0"/>
         <TextBox x:Name="TB_CIF_Proveedor" HorizontalAlignment="Left" Height="23" Margin="203,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="158" PreviewTextInput="TB_CIF_Proveedor_PreviewTextInput"/>
         <Label Content="Añadir Proveedor" HorizontalAlignment="Left" Margin="89,14,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.824,0.138" FontSize="30" Height="51" Width="280" Foreground="#FF09D446" FontWeight="Bold"/>

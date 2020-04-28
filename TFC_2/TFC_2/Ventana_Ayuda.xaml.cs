@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 
 namespace TFC_2
 {
+
     /// <summary>
     /// Lógica de interacción para Ventana_Ayuda.xaml
     /// </summary>
@@ -27,6 +28,11 @@ namespace TFC_2
         private void btnAceptar_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        public void cambiarTexto(String textito)
+        {
+            LBTexto.Content = textito;
         }
     }
 }

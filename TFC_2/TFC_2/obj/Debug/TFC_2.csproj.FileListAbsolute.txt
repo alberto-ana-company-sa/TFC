@@ -94,3 +94,23 @@ C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\obj\Debug\Ventana_Cliente_Direccio
 C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\obj\Debug\Ventana_Cliente_Telefono.g.cs
 C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\obj\Debug\Ventana_Cliente_Direccion.baml
 C:\Users\Usuario\Source\Repos\TFC\TFC_2\TFC_2\obj\Debug\Ventana_Cliente_Telefono.baml
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Ayuda.g.cs
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Cliente_Anadir.g.cs
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Cliente_Direccion.g.cs
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Cliente_Email.g.cs
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Cliente_Telefono.g.cs
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Proveedores_Direccion.g.cs
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Proveedores_Email.g.cs
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Proveedores_Telefono.g.cs
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Proveedor_Anadir.g.cs
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Ayuda.baml
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Cliente_Anadir.baml
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Cliente_Direccion.baml
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Cliente_Email.baml
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Cliente_Telefono.baml
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Proveedores_Direccion.baml
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Proveedores_Email.baml
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Proveedores_Telefono.baml
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Proveedor_Anadir.baml
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Listado_Articulos.g.cs
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Listado_Articulos.baml
