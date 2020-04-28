@@ -17,8 +17,8 @@
         <TextBox x:Name="TBPrecio" HorizontalAlignment="Left" Height="23" Margin="179,408,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="332"/>
         <Label Content="Modificar Articulos" HorizontalAlignment="Left" Margin="89,14,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.824,0.138" FontSize="30" Height="51" Width="292" Foreground="#FF09D446" FontWeight="Bold"/>
         <Image Source="editarN.png" Width="47" HorizontalAlignment="Left" Margin="37,16,0,0" Grid.Column="0" Height="61" VerticalAlignment="Top" Cursor="None"/>
-        <Button x:Name="btnGuardar" Content="Guardar" HorizontalAlignment="Left" Height="31" Margin="336,482,0,-110.6" VerticalAlignment="Top" Width="95" BorderBrush="#FF00DD00" Background="#FF00DD00" Foreground="White" FontWeight="Bold"/>
+        <Button x:Name="btnGuardar" Content="Guardar" HorizontalAlignment="Left" Height="31" Margin="336,482,0,-110.6" VerticalAlignment="Top" Width="95" BorderBrush="#FF00DD00" Background="#FF00DD00" Foreground="White" FontWeight="Bold" Click="btnGuardar_Click"/>
         <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Height="31" Margin="226,482,0,-110.6" VerticalAlignment="Top" Width="95" BorderBrush="{x:Null}" Background="#FFAEAEAE" Foreground="White" FontWeight="Bold" Click="btnCancelar_Click" />
-        <Label x:Name="lbl_ERROR" Content="" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="71,308,0,0" VerticalAlignment="Top" Width="360" Background="{x:Null}" Foreground="Red"/>
+        <Label x:Name="lbl_ERROR" Content="" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="37,451,0,0" VerticalAlignment="Top" Width="474" Background="{x:Null}" Foreground="Red"/>
     </Grid>
 </Window>

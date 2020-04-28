@@ -21,9 +21,11 @@ namespace TFC_2
     /// </summary>
     public partial class Ventana_Listado_Articulos : Window
     {
+        public static Ventana_Listado_Articulos v;
         public Ventana_Listado_Articulos()
         {
             InitializeComponent();
+            Ventana_Listado_Articulos.v = this;
             DatosDataGridProductos();
         }
 
@@ -101,12 +103,20 @@ namespace TFC_2
 
         private void btnModificarProducto_Click(object sender, RoutedEventArgs e)
         {
-            int a = DataGridProductos.SelectedIndex;
+            int a = 0;
+           
 
-            var codigo = (DataGridProductos.Items[a] as System.Data.DataRowView).Row.ItemArray[0];
+            if (DataGridProductos.SelectedIndex != -1)
+            {
+                a = DataGridProductos.SelectedIndex;
+                var codigo = (DataGridProductos.Items[a] as System.Data.DataRowView).Row.ItemArray[0];
 
-            Ventana_Listado_Articulos_Modificacion ventanaModificacionArticulos = new Ventana_Listado_Articulos_Modificacion();
-            ventanaModificacionArticulos.Show();
+                Ventana_Listado_Articulos_Modificacion ventanaModificacionArticulos = new Ventana_Listado_Articulos_Modificacion();
+                ventanaModificacionArticulos.datosSelccionadosProducto(Convert.ToString(codigo));
+                ventanaModificacionArticulos.Show();
+            }
+
+            
         }
     }
 }
