@@ -114,3 +114,5 @@ C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_P
 C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Proveedor_Anadir.baml
 C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Listado_Articulos.g.cs
 C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Listado_Articulos.baml
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Listado_Articulos_Modificacion.g.cs
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Listado_Articulos_Modificacion.baml

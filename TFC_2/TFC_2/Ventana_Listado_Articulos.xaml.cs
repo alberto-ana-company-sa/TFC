@@ -98,5 +98,15 @@ namespace TFC_2
             ventanaAyuda.cambiarTexto(texto);
             ventanaAyuda.Show();
         }
+
+        private void btnModificarProducto_Click(object sender, RoutedEventArgs e)
+        {
+            int a = DataGridProductos.SelectedIndex;
+
+            var codigo = (DataGridProductos.Items[a] as System.Data.DataRowView).Row.ItemArray[0];
+
+            Ventana_Listado_Articulos_Modificacion ventanaModificacionArticulos = new Ventana_Listado_Articulos_Modificacion();
+            ventanaModificacionArticulos.Show();
+        }
     }
 }

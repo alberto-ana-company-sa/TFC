@@ -102,6 +102,9 @@
     <Compile Include="Ventana_Listado_Articulos.xaml.cs">
       <DependentUpon>Ventana_Listado_Articulos.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Ventana_Listado_Articulos_Modificacion.xaml.cs">
+      <DependentUpon>Ventana_Listado_Articulos_Modificacion.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Ventana_listado_Clientes.xaml.cs">
       <DependentUpon>Ventana_listado_Clientes.xaml</DependentUpon>
     </Compile>
@@ -161,6 +164,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Ventana_Listado_Articulos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventana_Listado_Articulos_Modificacion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -272,6 +279,9 @@
     <Resource Include="emailW.png" />
     <Resource Include="telefonoW.png" />
     <Resource Include="ubicacionW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="editarN.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

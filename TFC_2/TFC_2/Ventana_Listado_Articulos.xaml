@@ -39,7 +39,7 @@
             </DataGrid.CellStyle>
         </DataGrid>
 
-        <Button x:Name="btnModificarProducto" HorizontalAlignment="Left"  Height="42" Margin="1335,55,0,0" VerticalAlignment="Top" Width="99" Background="#FFFFAE00">
+        <Button x:Name="btnModificarProducto" HorizontalAlignment="Left"  Height="42" Margin="1335,55,0,0" VerticalAlignment="Top" Width="99" Background="#FFFFAE00" Click="btnModificarProducto_Click">
             <Image Source="ModificarW.png"></Image>
 
         </Button>
