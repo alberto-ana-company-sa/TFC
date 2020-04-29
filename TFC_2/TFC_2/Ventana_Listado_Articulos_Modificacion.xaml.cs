@@ -34,7 +34,7 @@ namespace TFC_2
 
         public void datosSelccionadosProducto(String codigo)
         {
-           this.codigo = codigo;
+            this.codigo = codigo;
             string cadenaConexion = "server=localhost;database=lynse;uid=root;pwd=\"\";";
             MySqlConnection conexionBBDD = new MySqlConnection(cadenaConexion);
             try

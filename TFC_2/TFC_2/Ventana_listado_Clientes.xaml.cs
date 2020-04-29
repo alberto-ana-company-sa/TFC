@@ -82,7 +82,6 @@ namespace TFC_2
                 
             }
 
-
             string cadenaConexion = "server=localhost;database=lynse;uid=root;pwd=\"\";";
             MySqlConnection conexionBBDD = new MySqlConnection(cadenaConexion);
             try
@@ -125,28 +124,45 @@ namespace TFC_2
 
         private void btnEliminarCliente_Click(object sender, RoutedEventArgs e)
         {
-            int a = dataGridClientes.SelectedIndex;
-
-            var codigo = (dataGridClientes.Items[a] as System.Data.DataRowView).Row.ItemArray[0];
-
-            MessageBox.Show(codigo.ToString());
-            
-            string cadenaConexion = "server=localhost;database=lynse;uid=root;pwd=\"\";";
-            MySqlConnection conexionBBDD = new MySqlConnection(cadenaConexion);
-            try
+            if (dataGridClientes.SelectedIndex != -1)
             {
-                conexionBBDD.Open();
-                MySqlCommand cmd = new MySqlCommand("DELETE FROM clientes WHERE Codigo = " + codigo , conexionBBDD);
+                int a = dataGridClientes.SelectedIndex;
 
-                cmd.ExecuteNonQuery();
+                var codigo = (dataGridClientes.Items[a] as System.Data.DataRowView).Row.ItemArray[0];
 
-                conexionBBDD.Close();
+                MessageBox.Show(codigo.ToString());
 
-                DataGridClientes();
+                string cadenaConexion = "server=localhost;database=lynse;uid=root;pwd=\"\";";
+                MySqlConnection conexionBBDD = new MySqlConnection(cadenaConexion);
+                try
+                {
+                    conexionBBDD.Open();
+                    MySqlCommand cmd = new MySqlCommand("DELETE FROM clientes WHERE Codigo = " + codigo, conexionBBDD);
+
+                    cmd.ExecuteNonQuery();
+
+                    conexionBBDD.Close();
+
+                    DataGridClientes();
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
             }
-            catch (MySqlException ex)
+        }
+
+        private void ModificarCliente_Click(object sender, RoutedEventArgs e)
+        {
+            if (dataGridClientes.SelectedIndex != -1)
             {
-                MessageBox.Show(ex.ToString());
+                int a = dataGridClientes.SelectedIndex;
+
+                var codigo2 = (dataGridClientes.Items[a] as System.Data.DataRowView).Row.ItemArray[0];
+
+                Ventana_Cliente_Modificar ventana_Cliente_Modificar = new Ventana_Cliente_Modificar();
+                ventana_Cliente_Modificar.codigoCliente(Convert.ToString(codigo2));
+                ventana_Cliente_Modificar.Show();
             }
         }
     }

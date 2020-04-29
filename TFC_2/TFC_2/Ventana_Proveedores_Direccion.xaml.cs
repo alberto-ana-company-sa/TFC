@@ -40,7 +40,8 @@ namespace TFC_2
             try
             {
                 conexionBBDD.Open();
-                MySqlCommand cmd = new MySqlCommand("INSERT INTO direccion_proveedor (Codigo_Proveedor, Direccion, CP, Provincia, Poblacion) VALUES ('" + codigo + "' , '" + TB_Direccion_Proveedor.Text + "' , '" + TB_CP_Proveedores.Text + "' , '" + TB_Provincia_Proveedores.Text + "' , '" + TB_Poblacion_Proveedores.Text + "');", conexionBBDD);
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO direccion_proveedores (Codigo_Proveedores, Direccion, CP, Provincia, Poblacion) " +
+                    "VALUES ('" + codigo + "' , '" + TB_Direccion_Proveedor.Text + "' , '" + TB_CP_Proveedores.Text + "' , '" + TB_Provincia_Proveedores.Text + "' , '" + TB_Poblacion_Proveedores.Text + "');", conexionBBDD);
 
                 cmd.ExecuteNonQuery();
 

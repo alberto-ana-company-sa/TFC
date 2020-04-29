@@ -26,11 +26,17 @@ namespace TFC_2
         }
 
         String codigo_cliente = "";
+        string ventana = "";
 
         public void TextBoxNombreCliente(string nombreCliente, string codigoCliente)
         {
             TB_NombreCliente.Text = nombreCliente;
             codigo_cliente = codigoCliente;
+        }
+
+        public void ventanaActual(string nombreVentana)
+        {
+            ventana = nombreVentana;
         }
 
         private void btnAceptar_Click(object sender, RoutedEventArgs e)
@@ -45,7 +51,15 @@ namespace TFC_2
                 cmd.ExecuteNonQuery();
 
                 conexionBBDD.Close();
-                Ventana_listado_Clientes.v.DataGridClientes();
+                if (ventana.Equals("Ventana_Cliente_Modificar_Telefono"))
+                {
+                    Ventana_Cliente_Modificar_Telefono.v.DatosDataGrid();
+                }
+                else
+                {
+                    Ventana_listado_Clientes.v.DataGridClientes();
+                }
+                
                 this.Close();
             }
             catch (MySqlException ex)

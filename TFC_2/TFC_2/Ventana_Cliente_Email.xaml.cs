@@ -21,6 +21,7 @@ namespace TFC_2
     public partial class Ventana_Cliente_Email : Window
     {
         string codigo_cliente = "";
+        string ventana = "";
         public Ventana_Cliente_Email()
         {
             InitializeComponent();
@@ -30,6 +31,12 @@ namespace TFC_2
         {
             TB_NombreCliente.Text = nombreCliente;
             codigo_cliente = codigoCliente;
+        }
+        
+
+        public void ventanaActual(string nombreVentana)
+        {
+            ventana = nombreVentana;
         }
 
         private void btnAceptar_Click(object sender, RoutedEventArgs e)
@@ -44,7 +51,15 @@ namespace TFC_2
                 cmd.ExecuteNonQuery();
 
                 conexionBBDD.Close();
-                Ventana_listado_Clientes.v.DataGridClientes();
+                if (ventana.Equals("Ventana_Cliente_Modificar_Email"))
+                {
+                    Ventana_Cliente_Modificar_Email.v.DatosDataGrid();
+                }
+                else
+                {
+                    Ventana_listado_Clientes.v.DataGridClientes();
+                }
+                
                 this.Close();
             }
             catch (MySqlException ex)

@@ -40,7 +40,7 @@ namespace TFC_2
             try
             {
                 conexionBBDD.Open();
-                MySqlCommand cmd = new MySqlCommand("INSERT INTO email_proveedores (Codigo_Proveedor, Email) VALUES ('" + codigo + "' , '" + TB_Email_Proveedor.Text + "');", conexionBBDD);
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO email_proveedores (Codigo_Proveedores, Email) VALUES ('" + codigo + "' , '" + TB_Email_Proveedor.Text + "');", conexionBBDD);
 
                 cmd.ExecuteNonQuery();
 

@@ -90,6 +90,18 @@
     <Compile Include="Ventana_Cliente_Email.xaml.cs">
       <DependentUpon>Ventana_Cliente_Email.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Ventana_Cliente_Modificar.xaml.cs">
+      <DependentUpon>Ventana_Cliente_Modificar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Cliente_Modificar_Direccion.xaml.cs">
+      <DependentUpon>Ventana_Cliente_Modificar_Direccion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Cliente_Modificar_Email.xaml.cs">
+      <DependentUpon>Ventana_Cliente_Modificar_Email.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Cliente_Modificar_Telefono.xaml.cs">
+      <DependentUpon>Ventana_Cliente_Modificar_Telefono.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Ventana_Cliente_Telefono.xaml.cs">
       <DependentUpon>Ventana_Cliente_Telefono.xaml</DependentUpon>
     </Compile>
@@ -148,6 +160,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Ventana_Cliente_Email.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventana_Cliente_Modificar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventana_Cliente_Modificar_Direccion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventana_Cliente_Modificar_Email.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventana_Cliente_Modificar_Telefono.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -26,10 +26,17 @@ namespace TFC_2
         }
 
         string codigo_cliente = "";
+        string ventana = "";
+
         public void TextBoxNombreCliente(string nombreCliente, string codigoCliente)
         {
             TB_NombreCliente.Text = nombreCliente;
             codigo_cliente = codigoCliente;
+        }
+
+        public void ventanaActual(string vent)
+        {
+            ventana = vent;
         }
 
         private void btnAceptar_Click(object sender, RoutedEventArgs e)
@@ -39,14 +46,20 @@ namespace TFC_2
             try
             {
                 conexionBBDD.Open();
-                MySqlCommand cmd = new MySqlCommand("INSERT INTO direccion_cliente (Codigo_Cliente, Direccion, CP, Provincia, Poblacion) VALUES ('" + codigo_cliente + "' , '" + TB_Direccion_Cliente.Text + "' , '" + TB_CP_Cliente.Text  + "' , '" +  TB_Provincia_Cliente.Text +"' , '" + TB_Poblacion_Cliente +"');", conexionBBDD);
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO direccion_cliente (Codigo_Cliente, Direccion, CP, Provincia, Poblacion) VALUES ('" + codigo_cliente + "' , '" + TB_Direccion_Cliente.Text + "' , '" + TB_CP_Cliente.Text  + "' , '" +  TB_Provincia_Cliente.Text +"' , '" + TB_Poblacion_Cliente.Text +"');", conexionBBDD);
 
                 cmd.ExecuteNonQuery();
 
                 conexionBBDD.Close();
-                Ventana_listado_Clientes.v.DataGridClientes();
-               
-
+                if (ventana.Equals("Ventana_Cliente_Modificar_Direccion"))
+                {
+                    Ventana_Cliente_Modificar_Direccion.v.DatosDataGrid();
+                }
+                else
+                {
+                    Ventana_listado_Clientes.v.DataGridClientes();
+                }
+                
                 this.Close();
 
             }

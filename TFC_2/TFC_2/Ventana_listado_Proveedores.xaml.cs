@@ -37,7 +37,7 @@ namespace TFC_2
             MySqlConnection conexionBBDD = new MySqlConnection(cadenaConexion);
             try
             {
-                MySqlCommand cmd = new MySqlCommand("SELECT proveedores.Nombre_Empresa, proveedores.CIF, direccion_proveedores.Direccion, direccion_proveedores.Poblacion, email_proveedores.Email " +
+                MySqlCommand cmd = new MySqlCommand("SELECT proveedores.Codigo, proveedores.Nombre_Empresa, proveedores.CIF, direccion_proveedores.Direccion, direccion_proveedores.Poblacion, email_proveedores.Email " +
                     "FROM proveedores, direccion_proveedores, email_proveedores, telefono_proveedor " +
                     "WHERE proveedores.Codigo = direccion_proveedores.Codigo_Proveedores " +
                     "AND email_proveedores.Codigo_Proveedores = proveedores.Codigo " +
@@ -85,7 +85,7 @@ namespace TFC_2
             MySqlConnection conexionBBDD = new MySqlConnection(cadenaConexion);
             try
             {
-                MySqlCommand cmd = new MySqlCommand("SELECT proveedores.Nombre_Empresa, proveedores.CIF, direccion_proveedores.Direccion, direccion_proveedores.Poblacion, email_proveedores.Email " +
+                MySqlCommand cmd = new MySqlCommand("SELECT proveedores.Codigo, proveedores.Nombre_Empresa, proveedores.CIF, direccion_proveedores.Direccion, direccion_proveedores.Poblacion, email_proveedores.Email " +
                     "FROM proveedores, direccion_proveedores, email_proveedores, telefono_proveedor " +
                     "WHERE proveedores.Codigo = direccion_proveedores.Codigo_Proveedores " +
                     "AND email_proveedores.Codigo_Proveedores = proveedores.Codigo " + where + " " +
@@ -111,12 +111,36 @@ namespace TFC_2
 
         private void btnAnadirProveedor_Click(object sender, RoutedEventArgs e)
         {
-
+            Ventana_Proveedor_Anadir ventana_Proveedor_Anadir = new Ventana_Proveedor_Anadir();
+            ventana_Proveedor_Anadir.Show();
         }
 
         private void btnEliminarProveedor_Click(object sender, RoutedEventArgs e)
         {
+            if (DataGridProveedores.SelectedIndex != -1)
+            {
+                int a = DataGridProveedores.SelectedIndex;
 
+                var codigo = (DataGridProveedores.Items[a] as System.Data.DataRowView).Row.ItemArray[0];
+
+                string cadenaConexion = "server=localhost;database=lynse;uid=root;pwd=\"\";";
+                MySqlConnection conexionBBDD = new MySqlConnection(cadenaConexion);
+                try
+                {
+                    conexionBBDD.Open();
+                    MySqlCommand cmd = new MySqlCommand("DELETE FROM proveedores WHERE Codigo = " + codigo, conexionBBDD);
+
+                    cmd.ExecuteNonQuery();
+
+                    conexionBBDD.Close();
+
+                    DatosDataGridProveedores();
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+            }
         }
 
         private void btnModificarCliente_Click(object sender, RoutedEventArgs e)
@@ -126,7 +150,8 @@ namespace TFC_2
 
         private void btnAyuda_Click(object sender, RoutedEventArgs e)
         {
-
+            Ventana_Ayuda ventana_Ayuda = new Ventana_Ayuda();
+            ventana_Ayuda.Show();
         }
     }
 }

@@ -30,7 +30,7 @@
         <Button x:Name="btnEliminarCliente" HorizontalAlignment="Left" Height="42" Margin="713,55,0,0" VerticalAlignment="Top" Width="99" Background="Red" BorderBrush="{x:Null}" Click="btnEliminarCliente_Click">
             <Image Source="EliminarW.png"></Image>
         </Button>
-        <Button x:Name="ModificarCliente"  HorizontalAlignment="Left"  Height="42" Margin="811,55,0,0" VerticalAlignment="Top" Width="99" Background="#FFFFAE00">
+        <Button x:Name="ModificarCliente"  HorizontalAlignment="Left"  Height="42" Margin="811,55,0,0" VerticalAlignment="Top" Width="99" Background="#FFFFAE00" Click="ModificarCliente_Click">
             <Image Source="ModificarW.png"></Image>
 
         </Button>
