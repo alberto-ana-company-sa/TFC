@@ -24,13 +24,18 @@ namespace TFC_2
         {
             InitializeComponent();
         }
-
+        String ventana = "";
         String codigo = "";
 
         public void InformacionProveedor(string nombreCliente, string codigoCliente)
         {
             TB_Nombre_Proveedor.Text = nombreCliente;
             codigo = codigoCliente;
+        }
+
+        public void ventanaActual(string vent)
+        {
+            ventana = vent;
         }
 
         private void btnAceptar_Click(object sender, RoutedEventArgs e)
@@ -45,7 +50,15 @@ namespace TFC_2
                 cmd.ExecuteNonQuery();
 
                 conexionBBDD.Close();
-                Ventana_listado_Proveedores.v.DatosDataGridProveedores();
+                if (ventana.Equals("Ventana_Proveedores_Modificar_Email"))
+                {
+                    Ventana_Proveedores_Modificar_Email.v.DatosDataGrid();
+                }
+                else
+                {
+                    Ventana_listado_Proveedores.v.DatosDataGridProveedores();
+                }
+
                 this.Close();
             }
             catch (MySqlException ex)

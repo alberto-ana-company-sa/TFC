@@ -25,11 +25,17 @@ namespace TFC_2
             InitializeComponent();
         }
         String codigo = "";
+        string ventana = "";
 
         public void InformacionProveedor(string nombreCliente, string codigoCliente)
         {
             TB_Nombre_Proveedor.Text = nombreCliente;
             codigo = codigoCliente;
+        }
+
+        public void ventanaActual (string vent)
+        {
+            ventana = vent;
         }
 
         private void TB_Telefono_Proveedor_PreviewTextInput(object sender, TextCompositionEventArgs e)
@@ -53,7 +59,15 @@ namespace TFC_2
                 cmd.ExecuteNonQuery();
 
                 conexionBBDD.Close();
-                Ventana_listado_Proveedores.v.DatosDataGridProveedores();
+                if (ventana.Equals("Ventana_Proveedores_Modificar_Telefono"))
+                {
+                    Ventana_Proveedores_Modificar_Telefono.v.DatosDataGrid();
+                }
+                else
+                {
+                    Ventana_listado_Proveedores.v.DatosDataGridProveedores();
+                }
+                
                 this.Close();
             }
             catch (MySqlException ex)

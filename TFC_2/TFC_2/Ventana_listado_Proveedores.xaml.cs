@@ -145,7 +145,16 @@ namespace TFC_2
 
         private void btnModificarCliente_Click(object sender, RoutedEventArgs e)
         {
+            if (DataGridProveedores.SelectedIndex != -1)
+            {
+                int a = DataGridProveedores.SelectedIndex;
 
+                var codigo2 = (DataGridProveedores.Items[a] as System.Data.DataRowView).Row.ItemArray[0];
+
+                Ventana_Proveedores_Modificar ventana_Proveedores_Modificar = new Ventana_Proveedores_Modificar();
+                ventana_Proveedores_Modificar.codigoProveedor(Convert.ToString(codigo2));
+                ventana_Proveedores_Modificar.Show();
+            }
         }
 
         private void btnAyuda_Click(object sender, RoutedEventArgs e)

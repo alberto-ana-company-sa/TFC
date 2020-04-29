@@ -13,7 +13,7 @@
         <Label Content="Dirección" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="67,122,0,0"/>
         <TextBox x:Name="TB_Direccion_Proveedor" HorizontalAlignment="Left" Height="23" Margin="199,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207" AutomationProperties.HelpText="j&lt;njnjnj"/>
 
-        <Label Content="Añadir Telefono" HorizontalAlignment="Left" Margin="89,19,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.824,0.138" FontSize="25" Height="51" Width="218" Foreground="#FF09D446" FontWeight="Bold"/>
+        <Label Content="Añadir Direccion" HorizontalAlignment="Left" Margin="89,19,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.824,0.138" FontSize="25" Height="51" Width="218" Foreground="#FF09D446" FontWeight="Bold"/>
         <Image Source="MasG.png" Width="47" HorizontalAlignment="Left" Margin="37,16,0,0" Grid.Column="0" Height="61" VerticalAlignment="Top" Cursor="None"/>
 
         <Button x:Name="btnAceptar" Content="Aceptar" HorizontalAlignment="Left" Height="31" Margin="322,274,0,0" VerticalAlignment="Top" Width="95" BorderBrush="#FF00DD00" Background="#FF00DD00" Foreground="White" FontWeight="Bold" Click="btnAceptar_Click"/>
