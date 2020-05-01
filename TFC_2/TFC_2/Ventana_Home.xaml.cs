@@ -412,5 +412,11 @@ namespace TFC_2
             Ventana_Listado_Articulos ventnaArticulos = new Ventana_Listado_Articulos();
             ventnaArticulos.Show();
         }
+
+        private void Label_PreviewMouseDown_3(object sender, MouseButtonEventArgs e)
+        {
+            Ventana_Venta_Principal ventanaVenta = new Ventana_Venta_Principal();
+            ventanaVenta.Show();
+        }
     }
 }

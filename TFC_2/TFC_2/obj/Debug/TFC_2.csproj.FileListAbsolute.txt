@@ -190,3 +190,21 @@ C:\Users\Usuario\Source\Repos\TFC2\TFC_2\TFC_2\obj\Debug\Ventana_Proveedores_Mod
 C:\Users\Usuario\Source\Repos\TFC2\TFC_2\TFC_2\obj\Debug\Ventana_Proveedores_Modificar_Direccion.baml
 C:\Users\Usuario\Source\Repos\TFC2\TFC_2\TFC_2\obj\Debug\Ventana_Proveedores_Modificar_Email.baml
 C:\Users\Usuario\Source\Repos\TFC2\TFC_2\TFC_2\obj\Debug\Ventana_Proveedores_Modificar_Telefono.baml
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Cliente_Modificar.g.cs
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Cliente_Modificar_Direccion.g.cs
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Cliente_Modificar_Email.g.cs
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Cliente_Modificar_Telefono.g.cs
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Proveedores_Modificar.g.cs
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Proveedores_Modificar_Direccion.g.cs
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Proveedores_Modificar_Email.g.cs
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Proveedores_Modificar_Telefono.g.cs
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Cliente_Modificar.baml
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Cliente_Modificar_Direccion.baml
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Cliente_Modificar_Email.baml
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Cliente_Modificar_Telefono.baml
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Proveedores_Modificar.baml
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Proveedores_Modificar_Direccion.baml
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Proveedores_Modificar_Email.baml
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Proveedores_Modificar_Telefono.baml
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Venta_Principal.g.cs
+C:\Users\Alberto\Desktop\PROYECTO FINAL DE CURSO\TFC_2\TFC_2\obj\Debug\Ventana_Venta_Principal.baml

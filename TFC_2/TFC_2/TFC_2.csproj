@@ -147,6 +147,9 @@
     <Compile Include="Ventana_Proveedor_Anadir.xaml.cs">
       <DependentUpon>Ventana_Proveedor_Anadir.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Ventana_Venta_Principal.xaml.cs">
+      <DependentUpon>Ventana_Venta_Principal.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -251,6 +254,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Ventana_Venta_Principal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -338,6 +345,36 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="editarN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="prismaticos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="casa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="telefonoB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="emailB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AnadirFichero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BorrarFichero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="impresora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="flechaderecha.png" />
+    <Resource Include="flechaizquierda.png" />
+    <Resource Include="flecha_derecha_fin.png" />
+    <Resource Include="flecha_izquierda_fin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="salirB.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
