@@ -78,6 +78,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="VentaGrafica.cs" />
     <Compile Include="Ventana_Ayuda.xaml.cs">
       <DependentUpon>Ventana_Ayuda.xaml</DependentUpon>
     </Compile>
