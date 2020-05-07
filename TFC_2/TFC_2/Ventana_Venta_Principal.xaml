@@ -5,59 +5,56 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TFC_2"
         mc:Ignorable="d"
-        Title="Ventana_Venta_Principal" Height="1290.877" Width="1589.225"  WindowState="Maximized" ResizeMode="NoResize">
+        Title="Pedidos de Venta" Height="1290.877" Width="1589.225"  WindowState="Maximized" ResizeMode="NoResize" Closing="Window_Closing">
     <Grid>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="233" Margin="61,16,0,0" VerticalAlignment="Top" Width="450"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="233" Margin="61,16,0,0" VerticalAlignment="Top" Width="450">
+        </Border>
         <Label Content="Pedido Venta" HorizontalAlignment="Left" Margin="62,17,0,0" VerticalAlignment="Top" Width="448" FontSize="14" Background="#FF09D446" Foreground="White" Height="26"/>
         <Label Content="Fecha" HorizontalAlignment="Left" Margin="62,91,0,0" VerticalAlignment="Top" Width="131" FontSize="14" Background="White" Foreground="#FF1C1C1C"/>
-        <Label Content="Fecha Entrega" HorizontalAlignment="Left" Margin="62,142,0,0" VerticalAlignment="Top" Width="131" FontSize="14" Background="White" Foreground="#FF1C1C1C"/>
-        <DatePicker HorizontalAlignment="Left" Margin="199,93,0,0" VerticalAlignment="Top" Width="201"/>
-        <DatePicker HorizontalAlignment="Left" Margin="199,143,0,0" VerticalAlignment="Top" Width="200"/>
-        <Label Content="Vendedor" HorizontalAlignment="Left" Margin="63,186,0,0" VerticalAlignment="Top" Width="80"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="197" Margin="202,57,0,0"/>
-        <TextBox TextWrapping="Wrap" Text="01" Margin="124,190,1438.2,1052.6"/>
-        <Button x:Name="btnAnadirCliente" HorizontalAlignment="Left" Height="20" Margin="152,190,0,0" VerticalAlignment="Top" Width="27" Background="#FFAEAEAE"  BorderBrush="{x:Null}">
+        <DatePicker Name="dateFecha" HorizontalAlignment="Left" Margin="199,93,0,0" VerticalAlignment="Top" Width="201" DisplayDate="{Binding DateTime.Now}"/>
+        <Label Content="Vendedor" HorizontalAlignment="Left" Margin="63,186,0,0" VerticalAlignment="Top" Width="61"/>
+        <TextBox x:Name="txt_CodigoPedido" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="197" Margin="240,57,0,0" KeyDown="txt_CodigoPedido_KeyDown"/>
+        <TextBox x:Name="txtVendedor" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="01" VerticalAlignment="Top" Width="36" Margin="129,187,0,0"/>
+        <Button x:Name="btnBuscarEmpleado" HorizontalAlignment="Left" Height="20" Margin="170,189,0,0" VerticalAlignment="Top" Width="27" Background="#FFAEAEAE"  BorderBrush="{x:Null}" Click="btnBuscarEmpleado_Click">
             <Image Source="prismaticos.png"></Image>
         </Button>
-        <Label Content="Almacen" HorizontalAlignment="Left" Margin="218,188,0,0" VerticalAlignment="Top" Width="80"/>
-        <TextBox TextWrapping="Wrap" Text="00" Margin="279,192,1283.2,1050.6" RenderTransformOrigin="0.505,0.5"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="230" Margin="539,18,0,0" VerticalAlignment="Top" Width="450">
             <TextBox TextWrapping="Wrap" Text="TextBox"/>
         </Border>
         <Label Content="Cliente" HorizontalAlignment="Left" Margin="540,18,0,0" VerticalAlignment="Top" Width="449" Background="#FF3F3F46" Foreground="White"/>
         <Label Content="Codigo" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="542,47,0,0" Width="51"/>
-        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="102" Margin="598,51,0,0"/>
-        <Button x:Name="btnBuscarCodigoCliente" HorizontalAlignment="Left" Height="20" Margin="707,52,0,0" VerticalAlignment="Top" Width="27" Background="White"  BorderBrush="{x:Null}">
+        <TextBox Name="txt_CodigoCliente" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="102" Margin="600,51,0,0"/>
+        <Button x:Name="btnBuscarCodigoCliente" HorizontalAlignment="Left" Height="20" Margin="707,52,0,0" VerticalAlignment="Top" Width="27" Background="White"  BorderBrush="{x:Null}" Click="btnBuscarCodigoCliente_Click">
             <Image Source="lupita.png"></Image>
         </Button>
         <Label Content="DNI" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="806,47,0,0" Width="51"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="843,50,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txt_DniCliente" HorizontalAlignment="Left" Height="23" Margin="843,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
         <Label Content="Nombre" HorizontalAlignment="Left" Margin="543,83,0,0" VerticalAlignment="Top" Width="54"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="602,85,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="361"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="602,114,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="361"/>
+        <TextBox Name="txt_NombreCliente" HorizontalAlignment="Left" Height="23" Margin="602,85,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="361" IsEnabled="False"/>
+        <TextBox Name="txt_DireccionCliente" HorizontalAlignment="Left" Height="23" Margin="602,114,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="361" IsEnabled="False"/>
         <Label Content="Direccion" HorizontalAlignment="Left" Margin="543,113,0,0" VerticalAlignment="Top" Width="59"/>
         <Button x:Name="btnBuscarDireccionCliente" HorizontalAlignment="Left" Height="20" Margin="964,114,0,0" VerticalAlignment="Top" Width="22" Background="White"  BorderBrush="{x:Null}">
             <Image Source="casa.png"></Image>
         </Button>
         <Label Content="C. Postal" HorizontalAlignment="Left" Margin="543,141,0,0" VerticalAlignment="Top" Width="55"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="602,143,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="65"/>
+        <TextBox Name="txt_CPostalCiente" HorizontalAlignment="Left" Height="23" Margin="602,143,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="65" IsEnabled="False"/>
         <Label Content="Poblacion" HorizontalAlignment="Left" Margin="675,140,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="745,143,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="218"/>
+        <TextBox Name="txt_PoblacionCliente" HorizontalAlignment="Left" Height="23" Margin="745,143,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="218" IsEnabled="False"/>
         <Label Content="Provincia" HorizontalAlignment="Left" Margin="542,174,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="602,177,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="140"/>
+        <TextBox x:Name="txt_ProvinciaCliente" HorizontalAlignment="Left" Height="23" Margin="602,177,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140" IsEnabled="False"/>
         <Label Content="Telefono" HorizontalAlignment="Left" Margin="748,175,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="803,177,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="160"/>
+        <TextBox x:Name="txt_Telefono" HorizontalAlignment="Left" Height="23" Margin="803,177,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" IsEnabled="False"/>
         <Button x:Name="btnBuscarTelefonoCliente" HorizontalAlignment="Left" Height="20" Margin="964,178,0,0" VerticalAlignment="Top" Width="22" Background="White"  BorderBrush="{x:Null}">
             <Image Source="telefonoB.png"></Image>
         </Button>
         <Label Content="Email" HorizontalAlignment="Left" Margin="542,209,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="602,211,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="361"/>
+        <TextBox Name="txt_Email" HorizontalAlignment="Left" Height="23" Margin="602,211,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="361" IsEnabled="False"/>
         <Button x:Name="btnBuscarTelefonoCliente_Copy" HorizontalAlignment="Left" Height="20" Margin="964,212,0,0" VerticalAlignment="Top" Width="22" Background="White"  BorderBrush="{x:Null}">
             <Image Source="emailB.png"/>
         </Button>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="225" Margin="1005,18,0,0" VerticalAlignment="Top" Width="465"/>
         <Label Content="Observaciones del pedido" HorizontalAlignment="Left" Margin="1006,18,0,0" VerticalAlignment="Top" Width="463" Background="#FF3F3F46" Foreground="White"/>
-        <TextBox HorizontalAlignment="Left" Height="189" Margin="1007,52,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="460"/>
+        <TextBox Name="txtComentario" HorizontalAlignment="Left" Height="189" Margin="1007,52,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="460"/>
         <Label Content="Codigo de pedido" HorizontalAlignment="Left" Margin="63,54,0,0" VerticalAlignment="Top"/>
         <DataGrid HorizontalAlignment="Left" Height="409" Margin="61,276,0,0" VerticalAlignment="Top" Width="1402"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="129" Margin="64,697,0,0" VerticalAlignment="Top" Width="673"/>
@@ -87,7 +84,7 @@
         <Button x:Name="btnIralPrimero" HorizontalAlignment="Left" Height="58" Margin="524,704,0,0" VerticalAlignment="Top" Width="56" Background="White"  BorderBrush="{x:Null}">
             <Image Source="flecha_derecha_fin.png" Width="52" Height="52"/>
         </Button>
-        <Button x:Name="btnSalir" HorizontalAlignment="Left" Height="48" Margin="645,704,0,0" VerticalAlignment="Top" Width="50" Background="White"  BorderBrush="{x:Null}">
+        <Button x:Name="btnSalir" HorizontalAlignment="Left" Height="48" Margin="645,704,0,0" VerticalAlignment="Top" Width="50" Background="White"  BorderBrush="{x:Null}" Click="btnSalir_Click">
             <Image Source="salirB.png" Width="43" Height="48"/>
         </Button>
         <Label Content="Salir" HorizontalAlignment="Left" Margin="651,759,0,0" VerticalAlignment="Top"/>
@@ -98,6 +95,13 @@
         <Label Content="Total" HorizontalAlignment="Left" Margin="1326,701,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
         <Label Content="(€)" HorizontalAlignment="Left" Margin="1322,758,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
         <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="0.00" VerticalAlignment="Top" Width="117" Margin="1346,765,0,0" Background="#FFE1E3E7" FontWeight="Bold" BorderBrush="#FFE1E3E7"/>
+        <ComboBox Name="cb_TipoPedido" HorizontalAlignment="Left" Margin="174,57,0,0" VerticalAlignment="Top" Width="51" Background="{x:Null}" BorderBrush="{x:Null}">
+            <Button Content="A" BorderBrush="{x:Null}" Background="{x:Null}"/>
+            <Button Content="R" Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <Button Content="ST" Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <Button Content="RE" Background="{x:Null}" BorderBrush="{x:Null}"/>
+        </ComboBox>
+        <Label Name="lblNombreVendedor" Content="" HorizontalAlignment="Left" Margin="64,143,0,0" VerticalAlignment="Top" Width="267"/>
 
     </Grid>
 </Window>

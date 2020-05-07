@@ -35,7 +35,7 @@ namespace TFC_2
             ValorTotalPedidosNoFacturasLabelAmarillo();
             ValorTotalAlbaranesPendientesDeCobroLabelAzul();
             ValorTotalNumeroPedidosFacturadosLabelNaranja();
-
+            GraficaBarras();
 
 
             string cadenaConexion = "server=localhost;database=lynse;uid=root;pwd=\"\";";

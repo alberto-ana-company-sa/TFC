@@ -82,6 +82,9 @@
     <Compile Include="Ventana_Ayuda.xaml.cs">
       <DependentUpon>Ventana_Ayuda.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Ventana_Busqueda.xaml.cs">
+      <DependentUpon>Ventana_Busqueda.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Ventana_Cliente_Anadir.xaml.cs">
       <DependentUpon>Ventana_Cliente_Anadir.xaml</DependentUpon>
     </Compile>
@@ -164,6 +167,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Ventana_Ayuda.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventana_Busqueda.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
