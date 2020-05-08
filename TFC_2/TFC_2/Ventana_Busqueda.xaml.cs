@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -87,6 +88,9 @@ namespace TFC_2
             this.Close();
         }
 
+        String codigoDireccion;
+        String codigoTelefono;
+        String codigoEmail;
         private void btnAceptar_Click(object sender, RoutedEventArgs e)
         {
             // CUANDO UN CLIENTE NO TIENE (EMAIL, TELEFONO O DIRECCION) FALLA PORQUE AL BUSCAR NO ENCUENTRA DATOSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS!
@@ -128,6 +132,7 @@ namespace TFC_2
                         MySqlDataReader readerDirec = null;
                         readerDirec = consultaDireccion.ExecuteReader();
                         readerDirec.Read();
+                        codigoDireccion = readerDirec.GetString(0);
                         Ventana_Venta_Principal.v.txt_DireccionCliente.Text = readerDirec.GetString(2);
                         Ventana_Venta_Principal.v.txt_CPostalCiente.Text = readerDirec.GetString(3);
                         Ventana_Venta_Principal.v.txt_PoblacionCliente.Text = readerDirec.GetString(5);
@@ -149,6 +154,7 @@ namespace TFC_2
                         MySqlDataReader readerTelefono = null;
                         readerTelefono = consultaTelefono.ExecuteReader();
                         readerTelefono.Read();
+                        codigoTelefono = readerTelefono.GetString(0);
                         Ventana_Venta_Principal.v.txt_Telefono.Text = readerTelefono.GetString(2);
                         Ventana_Venta_Principal.codigoTelefono = readerTelefono.GetString(0);
                         readerTelefono.Close();
@@ -166,6 +172,7 @@ namespace TFC_2
                         MySqlDataReader readerEmail = null;
                         readerEmail = consultaEmail.ExecuteReader();
                         readerEmail.Read();
+                        codigoEmail = readerEmail.GetString(0);
                         Ventana_Venta_Principal.v.txt_Email.Text = readerEmail.GetString(2);
                         Ventana_Venta_Principal.codigoEmail = readerEmail.GetString(0);
 
@@ -177,9 +184,8 @@ namespace TFC_2
                         MessageBox.Show(ex.ToString());
                     }
 
-
                     GuardarDatosPedido();
-
+                    Ventana_Venta_Principal.v.btnAnadirArticulo.IsEnabled = true;
                     this.Close();
 
                 }else if (nombreVentana.Equals("Empleados"))
@@ -217,10 +223,19 @@ namespace TFC_2
             MySqlConnection conexionBBDD = new MySqlConnection(cadenaConexion);
             try
             {
+                
+                string fecha = Convert.ToDateTime(Ventana_Venta_Principal.v.dateFecha.Text).ToString("yyyy-MM-dd");
+                MessageBox.Show(fecha);
                 conexionBBDD.Open();
-                MySqlCommand cmd = new MySqlCommand("INSERT INTO pedido_venta ( Codigo_Cliente, Codigo_Empleado, Tipo, date, Codigo_EmailCliente, Codigo_DireccionCliente, 	Codigo_TelefonoCliente) VALUES ( " + Ventana_Venta_Principal.v.txt_CodigoCliente.Text + ",'" +  "' , '"  + "', '" +  "', '" +  "');", conexionBBDD);
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO pedido_venta (Codigo, Codigo_Cliente, Codigo_Empleado, Tipo, Fecha, Codigo_EmailCliente, Codigo_DireccionCliente, Codigo_TelefonoCliente) VALUES ( " +
+                    Ventana_Venta_Principal.v.txt_CodigoPedido.Text + ", " + Ventana_Venta_Principal.v.txt_CodigoCliente.Text + ", " + Ventana_Venta_Principal.v.txtVendedor.Text + ",'" + Ventana_Venta_Principal.v.cb_TipoPedido.Text + "' , '" + fecha
+                    + "', " + codigoEmail + ", " + codigoDireccion +  ", " + codigoTelefono +");", conexionBBDD);
                 cmd.ExecuteNonQuery();
                 conexionBBDD.Close();
+
+                Ventana_Venta_Principal.v.btnBuscarCodigoCliente.IsEnabled = false;
+                Ventana_Venta_Principal.v.btnBuscarCodigoCliente.Visibility = System.Windows.Visibility.Collapsed;
+                Ventana_Venta_Principal.v.txt_CodigoCliente.IsEnabled = false;
             }
             catch (MySqlException ex)
             {

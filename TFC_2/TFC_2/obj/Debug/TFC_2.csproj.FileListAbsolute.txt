@@ -286,3 +286,13 @@ C:\Users\Usuario\Source\Repos\TFC3\TFC_2\TFC_2\obj\Debug\TFC_2.exe
 C:\Users\Usuario\Source\Repos\TFC3\TFC_2\TFC_2\obj\Debug\TFC_2.pdb
 C:\Users\Usuario\Source\Repos\TFC3\TFC_2\TFC_2\obj\Debug\Ventana_Busqueda.g.cs
 C:\Users\Usuario\Source\Repos\TFC3\TFC_2\TFC_2\obj\Debug\Ventana_Busqueda.baml
+C:\Users\Usuario\Source\Repos\TFC3\TFC_2\TFC_2\obj\Debug\Ventana_Buscar_Articulos.g.cs
+C:\Users\Usuario\Source\Repos\TFC3\TFC_2\TFC_2\obj\Debug\Ventana_Buscar_Articulos.baml
+C:\Users\Usuario\Source\Repos\TFC3\TFC_2\TFC_2\obj\Debug\Ventana_Numeros_Pedido_Venta.g.cs
+C:\Users\Usuario\Source\Repos\TFC3\TFC_2\TFC_2\obj\Debug\Ventana_Numeros_Pedido_Venta.baml
+C:\Users\Usuario\Source\Repos\TFC3\TFC_2\TFC_2\obj\Debug\Ventana_Seguridad_Borrar.g.cs
+C:\Users\Usuario\Source\Repos\TFC3\TFC_2\TFC_2\obj\Debug\Ventana_Seguridad_Borrar.baml
+C:\Users\Usuario\Source\Repos\TFC3\TFC_2\TFC_2\bin\Debug\Syncfusion.Compression.Base.dll
+C:\Users\Usuario\Source\Repos\TFC3\TFC_2\TFC_2\bin\Debug\Syncfusion.Pdf.Base.dll
+C:\Users\Usuario\Source\Repos\TFC3\TFC_2\TFC_2\bin\Debug\Syncfusion.Compression.Base.xml
+C:\Users\Usuario\Source\Repos\TFC3\TFC_2\TFC_2\bin\Debug\Syncfusion.Pdf.Base.xml

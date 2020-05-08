@@ -11,9 +11,9 @@
         </Border>
         <Label Content="Pedido Venta" HorizontalAlignment="Left" Margin="62,17,0,0" VerticalAlignment="Top" Width="448" FontSize="14" Background="#FF09D446" Foreground="White" Height="26"/>
         <Label Content="Fecha" HorizontalAlignment="Left" Margin="62,91,0,0" VerticalAlignment="Top" Width="131" FontSize="14" Background="White" Foreground="#FF1C1C1C"/>
-        <DatePicker Name="dateFecha" HorizontalAlignment="Left" Margin="199,93,0,0" VerticalAlignment="Top" Width="201" DisplayDate="{Binding DateTime.Now}"/>
+        <DatePicker Name="dateFecha" HorizontalAlignment="Left" Margin="199,93,0,0" VerticalAlignment="Top" Width="201" DisplayDate="{Binding DateTime.Now}" SelectedDateFormat="Short"/>
         <Label Content="Vendedor" HorizontalAlignment="Left" Margin="63,186,0,0" VerticalAlignment="Top" Width="61"/>
-        <TextBox x:Name="txt_CodigoPedido" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="197" Margin="240,57,0,0" KeyDown="txt_CodigoPedido_KeyDown"/>
+        <TextBox x:Name="txt_CodigoPedido" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="197" Margin="240,57,0,0" KeyDown="txt_CodigoPedido_KeyDown" IsReadOnly="True"/>
         <TextBox x:Name="txtVendedor" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="01" VerticalAlignment="Top" Width="36" Margin="129,187,0,0"/>
         <Button x:Name="btnBuscarEmpleado" HorizontalAlignment="Left" Height="20" Margin="170,189,0,0" VerticalAlignment="Top" Width="27" Background="#FFAEAEAE"  BorderBrush="{x:Null}" Click="btnBuscarEmpleado_Click">
             <Image Source="prismaticos.png"></Image>
@@ -24,7 +24,7 @@
         <Label Content="Cliente" HorizontalAlignment="Left" Margin="540,18,0,0" VerticalAlignment="Top" Width="449" Background="#FF3F3F46" Foreground="White"/>
         <Label Content="Codigo" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="542,47,0,0" Width="51"/>
         <TextBox Name="txt_CodigoCliente" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="102" Margin="600,51,0,0"/>
-        <Button x:Name="btnBuscarCodigoCliente" HorizontalAlignment="Left" Height="20" Margin="707,52,0,0" VerticalAlignment="Top" Width="27" Background="White"  BorderBrush="{x:Null}" Click="btnBuscarCodigoCliente_Click">
+        <Button x:Name="btnBuscarCodigoCliente" HorizontalAlignment="Left" Height="20" Margin="707,52,0,0" VerticalAlignment="Top" Width="27" Background="White"  BorderBrush="{x:Null}" Click="btnBuscarCodigoCliente_Click" IsEnabled="False">
             <Image Source="lupita.png"></Image>
         </Button>
         <Label Content="DNI" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="806,47,0,0" Width="51"/>
@@ -54,40 +54,43 @@
         </Button>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="225" Margin="1005,18,0,0" VerticalAlignment="Top" Width="465"/>
         <Label Content="Observaciones del pedido" HorizontalAlignment="Left" Margin="1006,18,0,0" VerticalAlignment="Top" Width="463" Background="#FF3F3F46" Foreground="White"/>
-        <TextBox Name="txtComentario" HorizontalAlignment="Left" Height="189" Margin="1007,52,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="460"/>
+        <TextBox Name="txtComentario" HorizontalAlignment="Left" Height="189" Margin="1007,52,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="460"/>
         <Label Content="Codigo de pedido" HorizontalAlignment="Left" Margin="63,54,0,0" VerticalAlignment="Top"/>
-        <DataGrid HorizontalAlignment="Left" Height="409" Margin="61,276,0,0" VerticalAlignment="Top" Width="1402"/>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="129" Margin="64,697,0,0" VerticalAlignment="Top" Width="673"/>
+        <DataGrid x:Name="dgDatos" HorizontalAlignment="Left" Height="409" Margin="61,276,0,0" VerticalAlignment="Top" Width="1402" IsReadOnly="True"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="129" Margin="60,697,0,0" VerticalAlignment="Top" Width="673"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="129" Margin="788,697,0,0" VerticalAlignment="Top" Width="528"/>
-        <Button x:Name="btnNuevoPedido" HorizontalAlignment="Left" Height="58" Margin="83,704,0,0" VerticalAlignment="Top" Width="56" Background="White"  BorderBrush="{x:Null}">
+        <Button x:Name="btnNuevoPedido" HorizontalAlignment="Left" Height="58" Margin="83,704,0,0" VerticalAlignment="Top" Width="56" Background="White"  BorderBrush="{x:Null}" Click="btnNuevoPedido_Click">
             <Image Source="AnadirFichero.png"/>
         </Button>
-        <Label Content="Nuevo" HorizontalAlignment="Left" Margin="82,750,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnBorrarPedido" HorizontalAlignment="Left" Height="58" Margin="151,704,0,0" VerticalAlignment="Top" Width="56" Background="White"  BorderBrush="{x:Null}">
+        <Label Content="Nuevo" HorizontalAlignment="Left" Margin="82,752,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnBorrarPedido" HorizontalAlignment="Left" Height="58" Margin="151,704,0,0" VerticalAlignment="Top" Width="56" Background="White"  BorderBrush="{x:Null}" Click="btnBorrarPedido_Click">
             <Image Source="BorrarFichero.png" Width="52" Height="52"/>
         </Button>
         <Label Content="Borrar" HorizontalAlignment="Left" Margin="152,754,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnImprimirFichero" HorizontalAlignment="Left" Height="58" Margin="215,704,0,0" VerticalAlignment="Top" Width="56" Background="White"  BorderBrush="{x:Null}">
+        <Button x:Name="btnPDF" HorizontalAlignment="Left" Height="58" Margin="215,704,0,0" VerticalAlignment="Top" Width="56" Background="White"  BorderBrush="{x:Null}" Click="btnPDF_Click">
             <Image Source="impresora.png" Width="52" Height="52"/>
         </Button>
-        <Label Content="Imprimir" HorizontalAlignment="Left" Margin="214,754,0,0" VerticalAlignment="Top"/>
+        <Label Content="Imprimir" HorizontalAlignment="Left" Margin="218,754,0,0" VerticalAlignment="Top"/>
 
-        <Button x:Name="btnUltimoFichero" HorizontalAlignment="Left" Height="58" Margin="326,704,0,0" VerticalAlignment="Top" Width="56" Background="White"  BorderBrush="{x:Null}">
+        <Button x:Name="btnAnadirArticulo" HorizontalAlignment="Left" Height="58" Margin="294,704,0,0" VerticalAlignment="Top" Width="56" Background="White"  BorderBrush="{x:Null}" Click="btnAnadirArticulo_Click" IsEnabled="False">
+            <Image Source="mas.png"/>
+        </Button>
+        <Button x:Name="btnPrimeroGuardado" HorizontalAlignment="Left" Height="58" Margin="378,704,0,0" VerticalAlignment="Top" Width="56" Background="White"  BorderBrush="{x:Null}" Click="btnPrimeroGuardado_Click">
             <Image Source="flecha_izquierda_fin.png" Width="52" Height="52"/>
         </Button>
-        <Button x:Name="btnIrParaAtras" HorizontalAlignment="Left" Height="58" Margin="390,704,0,0" VerticalAlignment="Top" Width="56" Background="White"  BorderBrush="{x:Null}">
+        <Button x:Name="btnIrParaAtras" HorizontalAlignment="Left" Height="58" Margin="442,704,0,0" VerticalAlignment="Top" Width="56" Background="White"  BorderBrush="{x:Null}" Click="btnIrParaAtras_Click" IsEnabled="False">
             <Image Source="flechaizquierda.png" Width="52" Height="52"/>
         </Button>
-        <Button x:Name="btnIrParaAlante" HorizontalAlignment="Left" Height="58" Margin="460,704,0,0" VerticalAlignment="Top" Width="56" Background="White"  BorderBrush="{x:Null}">
+        <Button x:Name="btnIrParaAlante" HorizontalAlignment="Left" Height="58" Margin="512,704,0,0" VerticalAlignment="Top" Width="56" Background="White"  BorderBrush="{x:Null}" Click="btnIrParaAlante_Click" IsEnabled="False">
             <Image Source="flechaderecha.png" Width="52" Height="52"/>
         </Button>
-        <Button x:Name="btnIralPrimero" HorizontalAlignment="Left" Height="58" Margin="524,704,0,0" VerticalAlignment="Top" Width="56" Background="White"  BorderBrush="{x:Null}">
+        <Button x:Name="btnUltimoGuardado" HorizontalAlignment="Left" Height="58" Margin="576,704,0,0" VerticalAlignment="Top" Width="56" Background="White"  BorderBrush="{x:Null}" Click="btnUltimoGuardado_Click">
             <Image Source="flecha_derecha_fin.png" Width="52" Height="52"/>
         </Button>
         <Button x:Name="btnSalir" HorizontalAlignment="Left" Height="48" Margin="645,704,0,0" VerticalAlignment="Top" Width="50" Background="White"  BorderBrush="{x:Null}" Click="btnSalir_Click">
             <Image Source="salirB.png" Width="43" Height="48"/>
         </Button>
-        <Label Content="Salir" HorizontalAlignment="Left" Margin="651,759,0,0" VerticalAlignment="Top"/>
+        <Label Content="Salir" HorizontalAlignment="Left" Margin="651,753,0,0" VerticalAlignment="Top"/>
         <Label Content="Base IVA" HorizontalAlignment="Left" Height="28" Margin="788,698,0,0" VerticalAlignment="Top" Width="178" Foreground="White" Background="#FF3F3F46"/>
         <Label Content="% IVA" HorizontalAlignment="Left" Height="28" Margin="965,698,0,0" VerticalAlignment="Top" Width="178" Foreground="White" Background="#FF3F3F46"/>
         <Label Content="Importe IVA" HorizontalAlignment="Left" Height="28" Margin="1138,698,0,0" VerticalAlignment="Top" Width="178" Foreground="White" Background="#FF3F3F46"/>
@@ -102,6 +105,7 @@
             <Button Content="RE" Background="{x:Null}" BorderBrush="{x:Null}"/>
         </ComboBox>
         <Label Name="lblNombreVendedor" Content="" HorizontalAlignment="Left" Margin="64,143,0,0" VerticalAlignment="Top" Width="267"/>
+        <Label Content="Añadir" HorizontalAlignment="Left" Margin="301,754,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

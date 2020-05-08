@@ -47,8 +47,14 @@
     <Reference Include="MySql.Data">
       <HintPath>..\..\MySql.Data.dll</HintPath>
     </Reference>
-    <Reference Include="Syncfusion.Licensing, Version=18.1460.0.44, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
-      <HintPath>..\packages\Syncfusion.Licensing.18.1.0.44\lib\net46\Syncfusion.Licensing.dll</HintPath>
+    <Reference Include="Syncfusion.Compression.Base, Version=18.1460.0.48, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Compression.Base.18.1.0.48\lib\net46\Syncfusion.Compression.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=18.1460.0.48, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Licensing.18.1.0.48\lib\net46\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Pdf.Base, Version=18.1460.0.48, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Pdf.Wpf.18.1.0.48\lib\net46\Syncfusion.Pdf.Base.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfProgressBar.WPF, Version=18.1460.0.44, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <HintPath>..\packages\Syncfusion.SfProgressBar.WPF.18.1.0.44\lib\net46\Syncfusion.SfProgressBar.WPF.dll</HintPath>
@@ -81,6 +87,9 @@
     <Compile Include="VentaGrafica.cs" />
     <Compile Include="Ventana_Ayuda.xaml.cs">
       <DependentUpon>Ventana_Ayuda.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ventana_Buscar_Articulos.xaml.cs">
+      <DependentUpon>Ventana_Buscar_Articulos.xaml</DependentUpon>
     </Compile>
     <Compile Include="Ventana_Busqueda.xaml.cs">
       <DependentUpon>Ventana_Busqueda.xaml</DependentUpon>
@@ -127,6 +136,9 @@
     <Compile Include="Ventana_listado_Proveedores.xaml.cs">
       <DependentUpon>Ventana_listado_Proveedores.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Ventana_Numeros_Pedido_Venta.xaml.cs">
+      <DependentUpon>Ventana_Numeros_Pedido_Venta.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Ventana_Proveedores_Direccion.xaml.cs">
       <DependentUpon>Ventana_Proveedores_Direccion.xaml</DependentUpon>
     </Compile>
@@ -151,6 +163,9 @@
     <Compile Include="Ventana_Proveedor_Anadir.xaml.cs">
       <DependentUpon>Ventana_Proveedor_Anadir.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Ventana_Seguridad_Borrar.xaml.cs">
+      <DependentUpon>Ventana_Seguridad_Borrar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Ventana_Venta_Principal.xaml.cs">
       <DependentUpon>Ventana_Venta_Principal.xaml</DependentUpon>
     </Compile>
@@ -167,6 +182,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Ventana_Ayuda.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventana_Buscar_Articulos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -230,6 +249,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Ventana_Numeros_Pedido_Venta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Ventana_Proveedores_Direccion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -259,6 +282,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Ventana_Proveedor_Anadir.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ventana_Seguridad_Borrar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -383,6 +410,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="salirB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="mas.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

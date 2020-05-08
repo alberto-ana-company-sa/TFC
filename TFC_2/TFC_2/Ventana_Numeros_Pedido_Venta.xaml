@@ -1,0 +1,25 @@
+﻿<Window x:Class="TFC_2.Ventana_Numeros_Pedido_Venta"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TFC_2"
+        mc:Ignorable="d"
+        Title="Añadir Articulo" Height="255.404" Width="611.021" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label Content="Codigo de Pedido:" HorizontalAlignment="Left" Margin="17,57,0,0" VerticalAlignment="Top" Width="107"/>
+        <TextBox x:Name="txtCodigoPedido" HorizontalAlignment="Left" Height="23" Margin="127,57,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="145" IsEnabled="False"/>
+        <Label Content="Cantidad:" HorizontalAlignment="Left" Margin="296,108,0,0" VerticalAlignment="Top" Width="116"/>
+        <TextBox x:Name="txtCantidad" HorizontalAlignment="Left" Height="23" Margin="421,108,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="145"/>
+        <Button x:Name="btnAceptar" Content="Aceptar" HorizontalAlignment="Left" Height="34" Margin="446,166,0,0" VerticalAlignment="Top" Width="117" Background="#FF09D446" BorderBrush="#FF09D446" Foreground="White" FontWeight="Bold" Click="btnAceptar_Click" />
+        <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Height="34" Margin="311,166,0,0" VerticalAlignment="Top" Width="117" Background="#FF3F3F46" BorderBrush="#FF3F3F46" Foreground="White" FontWeight="Bold" Click="btnCancelar_Click" />
+        <Label Content="Codigo de Artículo:" HorizontalAlignment="Left" Margin="296,57,0,0" VerticalAlignment="Top" Width="116"/>
+        <TextBox x:Name="txtCodigoArticulo" HorizontalAlignment="Left" Height="23" Margin="421,57,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="145" IsEnabled="False"/>
+        <Label Content="Precio:" HorizontalAlignment="Left" Margin="17,108,0,0" VerticalAlignment="Top" Width="107"/>
+        <TextBox x:Name="txtPrecio" HorizontalAlignment="Left" Height="23" Margin="127,108,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="145" IsEnabled="False"/>
+        <Label Content="IVA:" HorizontalAlignment="Left" Margin="17,166,0,0" VerticalAlignment="Top" Width="107"/>
+        <TextBox x:Name="txtIVA" HorizontalAlignment="Left" Height="23" Margin="127,166,0,0" TextWrapping="Wrap" Text="21" VerticalAlignment="Top" Width="47" IsEnabled="True"/>
+        <Label Content="%" HorizontalAlignment="Left" Margin="175,165,0,0" VerticalAlignment="Top" Width="63"/>
+
+    </Grid>
+</Window>
